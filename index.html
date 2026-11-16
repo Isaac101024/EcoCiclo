@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EcoCiclo – Recicladora</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--verde:#1F3D2B;--verde2:#2F6B3F;--crema:#F4F7F1;--claro:#E3ECDF;--tinta:#16241B;--gris:#3D5244;--amarillo:#E8B931}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--crema);color:var(--tinta);font-family:Inter,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.8}
+h1,h2,h3{font-family:'Space Grotesk',Arial,sans-serif;margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;font-size:24px;color:var(--verde)}
+.links{display:flex;flex-wrap:wrap;gap:28px;font-weight:500}
+.btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:600}
+.btn-oscuro{background:var(--verde);color:#fff}
+.btn-amarillo{background:var(--amarillo);color:var(--tinta)}
+.btn-borde{border:2px solid #fff;color:#fff}
+.hero{background:var(--verde);color:#fff;padding:96px 0}
+.hero .tag{font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--amarillo);margin-bottom:20px}
+.hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;max-width:820px}
+.hero p{font-size:20px;max-width:640px;color:#DCE8DD;margin:24px 0}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:16px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:48px 0}
+.chip{background:var(--claro);padding:8px 18px;border-radius:999px;font-weight:500}
+section{padding:72px 0}
+h2{font-size:clamp(28px,4vw,40px);color:var(--verde);margin-bottom:12px}
+.sub{font-size:18px;max-width:620px;color:var(--gris);margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border-radius:20px;padding:32px}
+.card .num{font-family:'Space Grotesk',Arial,sans-serif;font-size:36px;font-weight:700;color:var(--verde2)}
+.card h3{font-size:22px;margin:8px 0 12px}
+.card p{margin:0;color:var(--gris)}
+.erres{background:var(--verde);color:#fff}
+.erres h2{color:#fff}
+.erres .sub{color:#DCE8DD}
+.erre{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:32px}
+.erre .letra{font-family:'Space Grotesk',Arial,sans-serif;font-size:72px;font-weight:700;line-height:1;color:var(--amarillo)}
+.erre h3{font-size:24px;margin:12px 0}
+.erre p{margin:0;color:#DCE8DD}
+.pasos{background:var(--claro)}
+.paso{display:flex;gap:16px;align-items:flex-start}
+.paso .n{flex:none;width:48px;height:48px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+.paso h3{font-size:20px;margin-bottom:6px}
+.paso p{margin:0;color:var(--gris)}
+.cta{background:var(--verde2);color:#fff;border-radius:28px;padding:64px 40px}
+.cta h2{color:#fff;max-width:640px}
+.cta p{font-size:18px;max-width:560px;color:#E3F0E4;margin:0 0 24px}
+.cta .acciones{display:flex;flex-wrap:wrap;gap:16px}
+footer{background:var(--tinta);color:#C9D8CB;padding:32px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#2F6B3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4a12 12 0 1 0 12 12"/><path d="M28 4v8h-8"/></svg>
+      EcoCiclo
+    </div>
+    <div class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#tres-r">Las 3 R</a>
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a class="btn btn-oscuro" href="#contacto">Solicitar recolección</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tag">Reciclaje fácil, para casas y negocios</div>
+    <h1>Lo que ya no usas puede tener otra vida.</h1>
+    <p>Recogemos, clasificamos y damos destino responsable a tu papel, plástico, vidrio, metal y electrónicos. Tú separas, nosotros hacemos el resto.</p>
+    <div class="acciones">
+      <a class="btn btn-amarillo" href="#contacto">Agenda una recolección</a>
+      <a class="btn btn-borde" href="#servicios">Ver servicios</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap chips">
+  <strong style="margin-right:12px">Recibimos:</strong>
+  <span class="chip">Papel y cartón</span>
+  <span class="chip">Plástico PET</span>
+  <span class="chip">Vidrio</span>
+  <span class="chip">Latas y metal</span>
+  <span class="chip">Electrónicos</span>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2>Nuestros servicios</h2>
+    <p class="sub">Elige la opción que mejor se adapte a ti.</p>
+    <div class="grid">
+      <div class="card"><div class="num">01</div><h3>Recolección a domicilio</h3><p>Pasamos por tu casa en el día que acordemos. Sin viajes ni cargar bolsas.</p></div>
+      <div class="card"><div class="num">02</div><h3>Centro de acopio</h3><p>Lleva tus materiales cuando quieras a nuestro punto de recepción. [DIRECCIÓN Y HORARIO]</p></div>
+      <div class="card"><div class="num">03</div><h3>Plan para empresas</h3><p>Contenedores, rutas periódicas y reportes de lo reciclado para tu negocio u oficina.</p></div>
+      <div class="card"><div class="num">04</div><h3>Electrónicos y residuos especiales</h3><p>Celulares, cables, computadoras y aparatos viejos con disposición responsable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tres-r" class="erres">
+  <div class="wrap">
+    <h2>Las 3 R: el orden importa</h2>
+    <p class="sub">Reciclar es el último paso. Antes hay dos hábitos que reducen aún más la basura.</p>
+    <div class="grid">
+      <div class="erre"><div class="letra">R</div><h3>Reducir</h3><p>Consume solo lo necesario. Menos empaques, menos desechables, menos compras impulsivas.</p></div>
+      <div class="erre"><div class="letra">R</div><h3>Reutilizar</h3><p>Dale otro uso a frascos, bolsas, cajas y ropa antes de tirarlos. Repara en lugar de reemplazar.</p></div>
+      <div class="erre"><div class="letra">R</div><h3>Reciclar</h3><p>Lo que ya no pueda reducirse ni reutilizarse, nos lo traes y lo convertimos en materia prima nueva.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" class="pasos">
+  <div class="wrap">
+    <h2 style="margin-bottom:40px">Así de simple</h2>
+    <div class="grid" style="gap:32px">
+      <div class="paso"><div class="n">1</div><div><h3>Separa</h3><p>Junta tus materiales limpios y secos, separados por tipo.</p></div></div>
+      <div class="paso"><div class="n">2</div><div><h3>Agenda</h3><p>Escríbenos, elige fecha y confirma tu recolección o visita.</p></div></div>
+      <div class="paso"><div class="n">3</div><div><h3>Recicla</h3><p>Clasificamos y enviamos todo a su nuevo ciclo de vida.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="cta">
+      <h2>¿Listo para reciclar con nosotros?</h2>
+      <p>Cuéntanos qué tienes y te decimos cómo recogerlo.</p>
+      <div class="acciones">
+        <a class="btn btn-amarillo" href="#contacto">WhatsApp: [TU NÚMERO]</a>
+        <a class="btn btn-borde" href="#contacto">[CORREO]</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong style="font-family:'Space Grotesk',Arial,sans-serif;font-size:18px;color:#fff">EcoCiclo</strong>
+    <span>Proyecto escolar · [CIUDAD] · © 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

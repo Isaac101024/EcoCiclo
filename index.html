@@ -74,6 +74,31 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
 .rv.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.bins svg{animation:none}html{scroll-behavior:auto}}
+
+section{scroll-margin-top:70px}
+.card{display:flex;flex-direction:column;gap:6px;cursor:pointer}
+.card svg{width:40px;height:40px;stroke:var(--v2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:8px}
+.card .mas{margin-top:14px;align-self:flex-start;background:none;border:0;padding:0;font:600 15px Inter,Arial,sans-serif;color:var(--v2);cursor:pointer}
+.card:hover .mas{text-decoration:underline}
+dialog{border:0;border-radius:24px;padding:32px;max-width:480px;width:calc(100% - 32px);color:var(--t)}
+dialog::backdrop{background:rgba(22,36,27,.65)}
+dialog h3{font-size:26px;color:var(--v);margin-bottom:8px}
+dialog p{color:var(--g);margin:0 0 12px}
+dialog ul{margin:0 0 20px;padding-left:20px;color:var(--g)}
+dialog .x{float:right;background:var(--cl);border:0;border-radius:50%;width:40px;height:40px;font-size:20px;cursor:pointer}
+.lema{display:inline-block;border:2px solid var(--a);border-radius:999px;padding:8px 20px;margin-bottom:26px;font-weight:500}
+.lema b{color:var(--a)}
+.mq{background:var(--v);color:#fff;overflow:hidden;white-space:nowrap;padding:18px 0;border-top:1px solid rgba(255,255,255,.15)}
+.mqt{display:inline-flex;animation:mq 28s linear infinite}
+.mqt span{font:700 28px 'Space Grotesk',Arial,sans-serif;padding-right:48px}
+.mqt span:after{content:"•";color:var(--a);padding-left:48px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.lb{margin-top:48px;text-align:center;padding:40px 20px;border-radius:24px;background:rgba(255,255,255,.08)}
+.lb svg{width:56px;height:56px;animation:sp 14s linear infinite}
+.lb p{font:700 clamp(22px,3.5vw,34px)/1.25 'Space Grotesk',Arial,sans-serif;color:var(--a);margin:16px auto 8px;max-width:760px}
+.lb small{color:#DCE8DD;font-size:16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.mqt,.lb svg{animation:none}}
 </style>
 </head>
 <body>
@@ -89,7 +114,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 <div><div class="tag">Reciclaje fácil, para casas y negocios</div>
 <h1>Lo que ya no usas puede tener otra vida.</h1>
 <p>Recogemos, clasificamos y damos destino responsable a tu papel, plástico, vidrio, metal y electrónicos. Tú separas, nosotros hacemos el resto.</p>
-<div class="acc"><a class="btn b2" href="#contacto">Agenda una recolección</a><a class="btn b3" href="#servicios">Ver servicios</a></div></div>
+<div class="lema">Nuestro lema: <b>Reducir · Reutilizar · Reciclar</b></div><br><div class="acc"><a class="btn b2" href="#contacto">Agenda una recolección</a><a class="btn b3" href="#servicios">Ver servicios</a></div></div>
 <div class="bins" role="img" aria-label="Tres contenedores de reciclaje: azul, verde y amarillo">
 <svg style="color:#3B82C4"><use href="#bin"/></svg><svg style="color:#3E9B58"><use href="#bin"/></svg><svg style="color:#E8B931"><use href="#bin"/></svg></div>
 </div></div>
@@ -98,14 +123,10 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 <div><b data-n="1200">0</b>kg reciclados</div><div><b data-n="85">0</b>familias atendidas</div><div><b data-n="12">0</b>empresas aliadas</div><div><b data-n="30">0</b>árboles equivalentes</div>
 </div><small>Cifras de ejemplo para el proyecto.</small></div>
 
+<div class="mq" role="img" aria-label="Nuestro lema: Reducir, Reutilizar, Reciclar"><div class="mqt"><span>Reducir</span><span>Reutilizar</span><span>Reciclar</span><span>Reducir</span><span>Reutilizar</span><span>Reciclar</span><span>Reducir</span><span>Reutilizar</span><span>Reciclar</span><span>Reducir</span><span>Reutilizar</span><span>Reciclar</span></div></div>
 <section id="servicios"><div class="w rv">
-<h2>Nuestros servicios</h2><p class="sub">Elige la opción que mejor se adapte a ti.</p>
-<div class="grid">
-<div class="card"><div class="n">01</div><h3>Recolección a domicilio</h3><p>Pasamos por tu casa el día que acordemos. Sin viajes ni cargar bolsas.</p></div>
-<div class="card"><div class="n">02</div><h3>Centro de acopio</h3><p>Lleva tus materiales a nuestro punto de recepción. [DIRECCIÓN Y HORARIO]</p></div>
-<div class="card"><div class="n">03</div><h3>Plan para empresas</h3><p>Contenedores, rutas periódicas y reportes de lo reciclado para tu negocio.</p></div>
-<div class="card"><div class="n">04</div><h3>Electrónicos y especiales</h3><p>Celulares, cables y aparatos viejos con disposición responsable.</p></div>
-</div></div></section>
+<h2>Nuestros servicios</h2><p class="sub">Elige la opción que mejor se adapte a ti y toca cualquiera para ver los detalles.</p>
+<div class="grid"><div class="card" data-s="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Recolección a domicilio</h3><p>Pasamos por tu casa el día que acordemos. Sin viajes ni cargar bolsas.</p><button class="mas" type="button">Ver más →</button></div><div class="card" data-s="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>Centro de acopio</h3><p>Lleva tus materiales a nuestro punto de recepción.</p><button class="mas" type="button">Ver más →</button></div><div class="card" data-s="2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-2v18M12 9h8v12M7 9h2M7 13h2M7 17h2M15 13h2M15 17h2"/></svg><h3>Plan para empresas</h3><p>Contenedores, rutas periódicas y reportes de lo reciclado.</p><button class="mas" type="button">Ver más →</button></div><div class="card" data-s="3"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg><h3>Electrónicos y especiales</h3><p>Celulares, cables y aparatos viejos con disposición responsable.</p><button class="mas" type="button">Ver más →</button></div></div></div></section>
 
 <section id="tres-r" class="dark"><div class="w rv">
 <h2>Las 3 R: el orden importa</h2><p class="sub">Reciclar es el último paso. Antes hay dos hábitos que reducen aún más la basura.</p>
@@ -113,7 +134,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 <div class="r"><i>R</i><h3>Reducir</h3><p>Consume solo lo necesario: menos empaques, menos desechables, menos compras impulsivas.</p></div>
 <div class="r"><i>R</i><h3>Reutilizar</h3><p>Dale otro uso a frascos, bolsas, cajas y ropa. Repara en lugar de reemplazar.</p></div>
 <div class="r"><i>R</i><h3>Reciclar</h3><p>Lo que ya no pueda reducirse ni reutilizarse, nos lo traes y vuelve a ser materia prima.</p></div>
-</div></div></section>
+</div><div class="lb"><svg viewBox="0 0 32 32" fill="none" stroke="#E8B931" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4a12 12 0 1 0 12 12"/><path d="M28 4v8h-8"/></svg><p>Reduce lo que consumes. Reutiliza lo que tienes. Recicla lo que sobra.</p><small>Las tres R son nuestro lema y la forma en que trabajamos todos los días.</small></div></div></section>
 
 <section id="guia"><div class="w rv">
 <h2>¿Qué va en cada contenedor?</h2><p class="sub">Separar bien es la mitad del trabajo.</p>
@@ -156,8 +177,9 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 <button class="btn b1" type="submit">Enviar por WhatsApp</button></form>
 </div></section>
 
-<footer><div class="w"><strong style="font:700 18px 'Space Grotesk',Arial,sans-serif;color:#fff">EcoCiclo</strong><span>Proyecto escolar · [CIUDAD] · © 2026</span></div></footer>
+<footer><div class="w"><strong style="font:700 18px 'Space Grotesk',Arial,sans-serif;color:#fff">EcoCiclo</strong><span>Reducir · Reutilizar · Reciclar</span><span>Proyecto escolar · [CIUDAD] · © 2026</span></div></footer>
 
+<dialog id="sd"><button class="x" id="sx" aria-label="Cerrar">×</button><h3 id="st"></h3><p id="sp"></p><ul id="sl"></ul><a class="btn b1" id="sb" href="#" target="_blank" rel="noopener">Solicitar este servicio</a></dialog>
 <a class="wa" id="wa" href="#" aria-label="Escríbenos por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.3 7.9L3 21l1.2-4.5A9 9 0 1 1 21 12z"/><path d="M9 9.5c0 3 2.500 5.500 5.500 5.500l1.500-1.500-2-1-1 1c-1-.5-2-1.500-2.500-2.500l1-1-1-2z" fill="#fff" stroke="none"/></svg></a>
 
 <script>
@@ -176,6 +198,20 @@ e.target.classList.add("on");io.unobserve(e.target)})},{threshold:.15});
 document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
 var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);io2.unobserve(e.target)}})},{threshold:.6});
 document.querySelectorAll("[data-n]").forEach(function(el){io2.observe(el)});
+
+var SV=[
+{t:"Recolección a domicilio",d:"Pasamos por tu casa en el día y horario que acordemos.",l:["Tú eliges día y horario","Recogemos bolsas o cajas ya separadas","Te avisamos cuando vamos en camino","[PRECIO O CONDICIONES]"]},
+{t:"Centro de acopio",d:"Un punto de recepción para que lleves tus materiales cuando te acomode.",l:["Dirección: [DIRECCIÓN]","Horario: [HORARIO]","Pesamos y clasificamos contigo","Recibimos papel, plástico, vidrio y metal"]},
+{t:"Plan para empresas",d:"Reciclaje constante para tu negocio u oficina, sin complicaciones.",l:["Contenedores por tipo de material","Rutas semanales o quincenales","Reporte de lo reciclado","[PRECIO O CONDICIONES]"]},
+{t:"Electrónicos y especiales",d:"Dale un final responsable a lo que no va en la basura normal.",l:["Celulares, cargadores y cables","Computadoras y aparatos viejos","Pilas y baterías","Entrega o recolección con cita"]}];
+var dg=document.getElementById("sd");
+function openS(i){var v=SV[i];document.getElementById("st").textContent=v.t;document.getElementById("sp").textContent=v.d;
+var u=document.getElementById("sl");u.innerHTML="";v.l.forEach(function(x){var li=document.createElement("li");li.textContent=x;u.appendChild(li)});
+document.getElementById("sb").href="https://wa.me/"+TEL+"?text="+encodeURIComponent("¡Hola! Me interesa el servicio de "+v.t+" de EcoCiclo.");
+dg.showModal()}
+document.querySelectorAll(".card[data-s]").forEach(function(c){c.addEventListener("click",function(){openS(+c.dataset.s)})});
+document.getElementById("sx").addEventListener("click",function(){dg.close()});
+dg.addEventListener("click",function(e){if(e.target===dg)dg.close()});
 </script>
 </body>
 </html>

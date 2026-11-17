@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>EcoCiclo – Recicladora</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>EcoCiclo | Contenedores inteligentes y recolección privada</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{--ink:#10281F;--mut:#4A6155;--g:#1F5D43;--amb:#E8B931;--glass:rgba(255,255,255,.55);--bd:rgba(255,255,255,.8);color-scheme:light;padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
@@ -99,202 +100,448 @@ dialog ul{margin:0 0 22px;padding-left:20px;color:var(--mut)}
 .js .rv.on{opacity:1;transform:none}
 @media (max-width:760px){nav .btn{white-space:nowrap;padding:10px 16px;font-size:14px}.nl{display:none}.hero{padding-top:120px}.sec{padding:64px 0}}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* EcoCiclo · dirección visual 2026 */
+:root{--ink:#142d25;--mut:#52675d;--g:#176746;--amb:#f5c85b;--glass:rgba(255,255,255,.84);--bd:rgba(255,255,255,.92)}
+body{background:#f6faf5;overflow-x:hidden}
+.bg{background:radial-gradient(circle at 12% 10%,#d9f4df 0,transparent 38%),radial-gradient(circle at 90% 35%,#fff0c5 0,transparent 30%),#f6faf5}
+.bg i{opacity:.23;filter:blur(110px)}
+.w{max-width:1200px}.glass{box-shadow:0 14px 50px rgba(19,65,44,.07);border-color:rgba(255,255,255,.92)}
+nav{top:18px;max-width:1200px;box-shadow:0 10px 45px rgba(20,50,35,.1);background:rgba(255,255,255,.9)}
+.logo{letter-spacing:-.055em;font-size:24px}.logo svg{background:#e1f4e5;padding:5px;border-radius:12px;width:38px;height:38px}
+.nl{gap:24px}.nl a{transition:color .2s}.nl a:focus-visible,.btn:focus-visible,.mas:focus-visible,.x:focus-visible,summary:focus-visible{outline:3px solid #e9b43c;outline-offset:4px}
+.hero{padding:165px 0 78px}.hero .w{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px}
+.hero h1{font-size:clamp(43px,5.5vw,75px);letter-spacing:-.065em;line-height:1.04;max-width:680px}.hero h1 em{font-style:normal;color:#218a5d}
+.hero p{font-size:18px;line-height:1.8}.pill{background:#e5f5e9;border:1px solid #ccebd5;color:#20583c;box-shadow:none}
+.btn{transition:transform .2s,box-shadow .2s,background .2s}.b1{background:#176746;box-shadow:0 8px 20px #17674620}.b1:hover{background:#0e5035}.b2{background:#fff;border:1px solid #d6e5d9}
+.hv{position:relative;overflow:hidden;padding:0;min-height:460px;border-radius:38px;background:linear-gradient(155deg,#d8f4d9,#f4f8e8 55%,#ffe9a9);display:flex;justify-content:center;box-shadow:0 24px 65px #154d3320}
+.hv:before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:#fff9;top:40px;left:50%;transform:translateX(-50%)}
+.hv .lt{width:280px;height:280px;z-index:1}.hv .lt svg.ic{width:86px;height:86px;margin:-43px 0 0 -43px}
+.hv .tr{z-index:2;margin-bottom:32px}.tr span{background:#fff;border:1px solid #d5ead8;padding:9px 17px}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-art .leaf{transform-origin:center;animation:sway 5s ease-in-out infinite alternate}@keyframes sway{to{transform:rotate(5deg) translateY(-5px)}}
+.hv .lt{margin-top:70px}.stats{background:#fff;padding:30px 16px;border-radius:26px}.st:not(:last-child){border-right:1px solid #e4eee6}.st b{font-size:36px}
+.sec{padding:100px 0}.hd h2{font-size:clamp(32px,4.4vw,52px);letter-spacing:-.05em}.hd p{line-height:1.75}
+.eb{font-size:12px;letter-spacing:.17em;background:#e5f5e9;border-radius:99px;padding:7px 14px}
+.grid{gap:20px}.gc{background:#fff;border:1px solid #e1ece4;border-radius:26px;padding:30px;box-shadow:0 8px 35px #184b2d0a}.gc h3{letter-spacing:-.035em}.chip{width:58px;height:58px;border-radius:18px;background:#e7f5e9}.chip svg{width:27px;height:27px}.sv{cursor:default}.sv:hover{transform:translateY(-4px)}.mas{padding:8px 0}.mas:hover{text-decoration:underline}
+#tres-r{background:linear-gradient(180deg,#eef7ed,#f7fbf5)}.lema{background:#fff}.lema .lt{flex-shrink:0}
+#guia .gc{border-top:4px solid #b8dfc3}.yn .gc{border-top:0}
+#faq details{background:#fff;border:1px solid #e0eae1;box-shadow:none;border-radius:17px;transition:border-color .2s}#faq details[open]{border-color:#8fc6a2}summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px}summary::-webkit-details-marker{display:none}summary:after{content:'+';font-size:27px;color:var(--g);font-weight:400}details[open] summary:after{content:'−'}
+.ct{grid-template-columns:.9fr 1.1fr}.ab{background:#185a3e;color:#fff;border:0;justify-content:center;position:relative;overflow:hidden}.ab:before{content:'';position:absolute;right:-90px;top:-90px;width:280px;height:280px;border:55px solid #ffffff13;border-radius:50%}.ab h2,.ab .eb{color:#fff}.ab p{color:#e1f3e7}.ab .eb{background:#ffffff24;align-self:flex-start}form{background:#fff;border:1px solid #e1ece4;border-radius:26px}input,select,textarea{background:#f8fbf8;border:1px solid #dce9df;width:100%;min-width:0}input:focus,select:focus,textarea:focus{outline:2px solid #87cba3;outline-offset:1px}footer{border-top:1px solid #dce9dd;background:#f0f7ef}.wa{background:#1b8658}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.process .gc{position:relative}.process .num{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;background:#e4f5e8;border-radius:14px}.process .gc h3{margin-top:16px}
+.material-photo{position:relative;border-radius:28px;overflow:hidden;min-height:270px;background:linear-gradient(135deg,#b7dec2,#f5eac8);display:flex;align-items:center;justify-content:center}.material-photo svg{width:min(100%,420px);height:250px}
+.mobile-menu{display:none;background:none;border:0;color:var(--g);padding:10px;cursor:pointer}
+@media(max-width:900px){.hero .w{grid-template-columns:1fr}.hero{padding-top:140px}.hv{min-height:380px}.ct{grid-template-columns:1fr}.st:not(:last-child){border-right:0}.stats{grid-template-columns:repeat(2,1fr);row-gap:22px}.process{grid-template-columns:1fr}}
+@media(max-width:760px){nav{border-radius:22px;flex-wrap:wrap;padding:9px 12px}.logo{font-size:21px}.mobile-menu{display:inline-flex;align-items:center;justify-content:center;margin-left:auto}.nl{display:none;order:4;width:100%;flex-direction:column;gap:0;padding:10px 0}.nl.open{display:flex}.nl a{padding:11px;border-top:1px solid #e5eee6}nav>.btn{padding:10px 13px;font-size:12px;min-height:40px}.hero{padding-top:156px}.hero h1{font-size:clamp(40px,10vw,58px)}.hero p{font-size:16px}.sec{padding:70px 0}.w{padding:0 18px}.hd{margin-bottom:30px}.hv{min-height:360px}.stats{padding:20px 8px}.st b{font-size:29px}.st span{font-size:12px}.gc{padding:24px}.ab{padding:30px}.wa{right:14px;bottom:14px}}
+@media(prefers-reduced-motion:reduce){.hero-art .leaf{animation:none}.btn,.gc{transition:none}}
+
 </style>
-</head>
+<meta content="Contenedores inteligentes EcoCiclo desde $2,500 MXN por unidad. Incluyen servicio de recolección con recolectores privados y mantenimiento gratuito del equipo recolector." name="description"/><meta content="#f6faf5" name="theme-color"/><script>document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';</script><style>
+/* EcoCiclo · mejora sobre el diseño existente: colores accesibles y modo oscuro sin almacenamiento */
+:root{--surface:#fff;--surface-soft:#f8fbf8;--canvas:#f6faf5;--text:#142d25;--sub:#52675d;--line:#dce9df;--shadow:0 14px 48px rgba(19,65,44,.075);--accent:#176746;--accent-strong:#0f5839;--tag-bg:#e5f5e9;--tag-text:#20583c;--hero-a:#d8f4d9;--hero-b:#f5f9ea;--hero-c:#ffebbb;--input-bg:#f8fbf8;--photo-grad:linear-gradient(135deg,#e5f4dc,#f6eecf);--bin-organic:#32a56b;--bin-recycle:#4a9af0;--bin-other:#e6ac49}
+html[data-theme=dark]{color-scheme:dark;--ink:#e8f7ed;--mut:#a8bfb1;--g:#85dfac;--amb:#eac46c;--glass:rgba(26,43,37,.89);--bd:rgba(142,186,156,.19);--surface:#1c2b26;--surface-soft:#20342a;--canvas:#101c18;--text:#ebf5ee;--sub:#b3cbbd;--line:#345245;--shadow:0 16px 46px rgba(0,0,0,.24);--accent:#8ce0ad;--accent-strong:#b3f3c5;--tag-bg:#244838;--tag-text:#b6f4d0;--hero-a:#203f33;--hero-b:#1b332b;--hero-c:#594529;--input-bg:#20352b;--photo-grad:linear-gradient(135deg,#245044,#253b33)}
+html[data-theme=dark] body{background:var(--canvas);color:var(--text)}
+html[data-theme=dark] .bg{background:radial-gradient(circle at 12% 9%,#224c38 0,transparent 35%),radial-gradient(circle at 96% 38%,#473a22 0,transparent 36%),#101c18}
+html[data-theme=dark] .bg i{opacity:.16}
+html[data-theme=dark] .glass{border-color:var(--bd);background:var(--glass);box-shadow:var(--shadow)}
+html[data-theme=dark] nav{background:rgba(24,42,33,.94);border-color:#365545}
+html[data-theme=dark] .logo{color:var(--accent)}
+html[data-theme=dark] .logo svg{background:#294c38}
+html[data-theme=dark] .hero .pill,html[data-theme=dark] .eb{background:var(--tag-bg);color:var(--tag-text);border-color:#365d45}
+html[data-theme=dark] .pill b,html[data-theme=dark] .hero h1 em,html[data-theme=dark] .num,html[data-theme=dark] .st b,html[data-theme=dark] .st svg,html[data-theme=dark] .mas{color:var(--accent)}
+html[data-theme=dark] .hero p,html[data-theme=dark] .hd p,html[data-theme=dark] .gc p,html[data-theme=dark] .st span,html[data-theme=dark] .note,html[data-theme=dark] .lema small,html[data-theme=dark] .yn li,html[data-theme=dark] details p{color:var(--sub)}
+html[data-theme=dark] .b1{background:#248255;color:#fff;box-shadow:0 8px 30px #061c114f}
+html[data-theme=dark] .b1:hover{background:#2c9863}
+html[data-theme=dark] .b2{background:#253e31;border-color:#436b51;color:var(--text)}
+html[data-theme=dark] .hv{background:linear-gradient(150deg,var(--hero-a),var(--hero-b) 53%,var(--hero-c));border-color:#3a624e;box-shadow:var(--shadow)}
+html[data-theme=dark] .hv:before{background:#52796125}
+html[data-theme=dark] .hv .lt svg.ic{color:#b0ffd0}
+html[data-theme=dark] .tr span{background:#254b35;color:#ddfce4;border-color:#426c52}
+html[data-theme=dark] .stats,html[data-theme=dark] .gc,html[data-theme=dark] .lema,html[data-theme=dark] #faq details,html[data-theme=dark] form{background:var(--surface);border-color:var(--line);box-shadow:var(--shadow)}
+html[data-theme=dark] .st:not(:last-child){border-color:var(--line)}
+html[data-theme=dark] .chip{background:#2a4b3a;color:var(--accent)}
+html[data-theme=dark] #tres-r{background:linear-gradient(180deg,#12251c,#16271f)}
+html[data-theme=dark] .lema p{color:var(--accent)}
+html[data-theme=dark] .process .num{background:#28523a}
+html[data-theme=dark] .ab{background:linear-gradient(155deg,#174b36,#0e3227);border-color:#395b48}
+html[data-theme=dark] .ab .eb{color:#ecfff2;background:#ffffff20}
+html[data-theme=dark] .ab p{color:#d0ebd9}
+html[data-theme=dark] input,html[data-theme=dark] select,html[data-theme=dark] textarea{background:var(--input-bg);color:var(--text);border-color:#42604e}
+html[data-theme=dark] input::placeholder,html[data-theme=dark] textarea::placeholder{color:#a8bdaf}
+html[data-theme=dark] footer{background:#11241a;border-color:#30533e;color:var(--sub)}
+html[data-theme=dark] footer b{color:var(--accent)}
+html[data-theme=dark] dialog{background:#1b2e25;color:var(--text);border-color:#52745e}
+html[data-theme=dark] dialog p,html[data-theme=dark] dialog ul{color:var(--sub)}
+html[data-theme=dark] .x{background:#284a39;color:var(--accent)}
+html[data-theme=dark] .nl a{border-color:var(--line)}
+html[data-theme=dark] .material-photo{background:var(--photo-grad)}
+html[data-theme=dark] .hero-art{opacity:.56}
+html[data-theme=dark] .yn .no svg.ic{color:#ff9e97}
+:where(a,button,summary,input,select,textarea):focus-visible{outline:3px solid #eabf53 !important;outline-offset:3px}
+button{touch-action:manipulation}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;width:43px;height:43px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--accent);cursor:pointer;transition:transform .2s,background .2s}
+.theme-toggle:hover{transform:rotate(-12deg);background:var(--tag-bg)}
+.theme-toggle svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme-toggle .sun{display:none}html[data-theme=dark] .theme-toggle .sun{display:block}html[data-theme=dark] .theme-toggle .moon{display:none}
+.top-actions{display:flex;align-items:center;gap:10px}
+.skip-link{position:fixed;z-index:90;top:-100px;left:16px;background:#1b6e46;color:#fff;padding:12px 18px;border-radius:14px}.skip-link:focus{top:12px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:9px 19px;margin-top:25px;color:var(--sub);font-size:13px;font-weight:600}
+.hero-proof span{display:inline-flex;align-items:center;gap:7px}.hero-proof svg{width:18px;height:18px;color:var(--accent)}
+.hero .w>div:first-child{min-width:0}
+.sec{scroll-margin-top:110px}
+/* Franja de fotografías: imágenes remotas de Unsplash con ilustración SVG si no hay conexión */
+.material-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.photo-card{background:var(--surface);border:1px solid var(--line);border-radius:25px;overflow:hidden;box-shadow:var(--shadow)}
+.photo-image{position:relative;aspect-ratio:1.58;overflow:hidden;background:var(--photo-grad);display:grid;place-items:center}
+.photo-image .photo-fallback{width:92px;height:92px;opacity:.7;color:var(--accent)}
+.photo-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.21,.74,.33,1)}
+.photo-image img[hidden]{display:none}.photo-card:hover .photo-image img{transform:scale(1.055)}
+.photo-copy{padding:19px 21px 22px}.photo-copy strong{display:block;font:700 19px 'Space Grotesk',Arial,sans-serif;letter-spacing:-.035em;color:var(--text)}.photo-copy span{font-size:13px;color:var(--sub)}
+.photo-sources{text-align:center;font-size:12px;margin-top:14px;color:var(--sub)}.photo-sources a{text-decoration:underline;text-underline-offset:3px}
+/* Contenedores: simulación didáctica sin persistencia ni datos reales */
+#contenedores{position:relative;background:linear-gradient(180deg,transparent,rgba(69,158,94,.045) 45%,transparent)}
+html[data-theme=dark] #contenedores{background:linear-gradient(180deg,transparent,rgba(91,158,108,.055) 45%,transparent)}
+.bins-intro{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:0 0 25px}
+.bins-intro .hd{margin:0;text-align:left}.bins-intro .hd p{margin-left:0;max-width:700px}
+.bins-actions{display:flex;gap:10px;flex-shrink:0}.bins-actions button{min-height:44px}
+.bins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.bin-card{--bin:#32a56b;--bin-rgb:50,165,107;position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:29px;padding:24px 23px 23px;box-shadow:var(--shadow);text-align:center;isolation:isolate}
+.bin-card.organic{--bin:#37a978;--bin-rgb:55,169,120}.bin-card.recyclable{--bin:#448bd1;--bin-rgb:68,139,209}.bin-card.nonrecyclable{--bin:#d39b4a;--bin-rgb:211,155,74}
+.bin-card:before{content:'';position:absolute;z-index:-1;top:-95px;left:50%;width:270px;height:230px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(var(--bin-rgb),.17),transparent 70%);pointer-events:none}
+.bin-head{display:flex;align-items:center;justify-content:center;gap:7px;margin-bottom:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--bin)}
+.bin-head:before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:var(--bin)}
+.bin-card h3{font-size:clamp(20px,2.3vw,24px);letter-spacing:-.045em;line-height:1.2;max-width:270px;margin:0 auto 9px;color:var(--text)}
+.bin-card .bin-desc{max-width:285px;min-height:70px;margin:0 auto 3px;font-size:13.5px;line-height:1.55;color:var(--sub)}
+.bin-visual{height:248px;position:relative;margin:5px auto 9px;max-width:230px;filter:drop-shadow(0 14px 12px rgba(0,0,0,.1))}
+.bin-lid{position:absolute;left:18px;right:18px;top:20px;height:23px;z-index:4;border-radius:10px 10px 6px 6px;background:linear-gradient(180deg,rgba(255,255,255,.31),transparent),var(--bin);box-shadow:inset 0 -4px 0 #0002}
+.bin-lid:before{content:'';position:absolute;width:54px;height:11px;left:50%;top:-10px;transform:translateX(-50%);border:6px solid var(--bin);border-bottom:0;border-radius:12px 12px 0 0}
+.bin-shell{position:absolute;left:30px;right:30px;top:39px;height:187px;border-radius:5px 5px 25px 25px;overflow:hidden;background:linear-gradient(105deg,#ffffff40,transparent 35%,#00000018 92%),var(--bin);box-shadow:inset -7px 0 0 #00000013,inset 7px 0 0 #ffffff30}
+.bin-shell:after{content:'';pointer-events:none;position:absolute;inset:0;border-radius:inherit;border:2px solid #ffffff2c}
+.bin-window{position:absolute;left:23%;right:23%;top:22px;bottom:20px;border-radius:11px 11px 16px 16px;overflow:hidden;background:rgba(7,27,22,.19);box-shadow:inset 0 1px 9px #00000031;border:2px solid #ffffff23}
+.bin-fill{position:absolute;bottom:0;left:0;right:0;height:0;background:linear-gradient(0deg,rgba(255,255,255,.62),rgba(255,255,255,.32)),repeating-linear-gradient(135deg,#ffffff48 0 11px,#ffffff1d 11px 22px);border-radius:10px 10px 0 0;transition:height .9s cubic-bezier(.2,.75,.2,1)}
+.bin-fill:before{content:'';position:absolute;top:-4px;left:0;right:0;height:8px;border-radius:100%;background:rgba(255,255,255,.62)}
+.bin-symbol{position:absolute;left:50%;top:81px;transform:translateX(-50%);z-index:3;display:grid;place-items:center;width:42px;height:42px;background:#ffffffd9;border-radius:14px;color:var(--bin);box-shadow:0 6px 19px #00000018}
+.bin-symbol svg{width:25px;height:25px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bin-wheel{position:absolute;bottom:12px;width:19px;height:19px;border-radius:6px;background:#23342e;border:4px solid #7c9187}.bin-wheel.l{left:43px}.bin-wheel.r{right:43px}
+.bin-falling{position:absolute;top:8px;left:50%;width:24px;height:24px;color:var(--bin);pointer-events:none;z-index:6;animation:binDrop .65s cubic-bezier(.12,.7,.3,1) both}
+.bin-falling svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes binDrop{0%{opacity:0;transform:translate(-50%,-48px) rotate(-35deg) scale(.72)}25%{opacity:1}100%{opacity:0;transform:translate(-50%,144px) rotate(45deg) scale(.7)}}
+.bin-meter{display:flex;justify-content:space-between;align-items:center;gap:9px;color:var(--sub);font-size:12px;font-weight:700;margin:6px 0 8px}
+.bin-meter output{font-variant-numeric:tabular-nums;color:var(--text);font-size:13px}
+.bin-track{height:7px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:17px}
+.bin-track>i{display:block;height:100%;width:0%;background:var(--bin);transition:width .9s cubic-bezier(.2,.75,.2,1);border-radius:99px}
+.bin-add{width:100%;border:1px solid rgba(var(--bin-rgb),.36);background:rgba(var(--bin-rgb),.1);color:var(--text);border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 14px;min-height:48px;font:700 14px Inter,Arial,sans-serif;cursor:pointer;transition:background .18s,transform .18s}
+.bin-add:hover{background:rgba(var(--bin-rgb),.2);transform:translateY(-1px)}.bin-add:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.bin-add svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.bin-note{font-size:12px;color:var(--sub);line-height:1.7;margin:19px 0 0;display:flex;align-items:start;gap:9px;padding:13px 16px;border:1px solid var(--line);border-radius:15px;background:var(--surface-soft)}
+.bin-note svg{flex:none;width:18px;height:18px;stroke:var(--accent);stroke-width:2;fill:none}
+.bins-feedback{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+/* Pulido de espaciado, responsive y carga */
+.gc,.photo-card,.bin-card{transition:box-shadow .22s,transform .22s}.gc:hover,.photo-card:hover,.bin-card:hover{box-shadow:0 17px 48px rgba(19,65,44,.12)}
+html[data-theme=dark] .gc:hover,html[data-theme=dark] .photo-card:hover,html[data-theme=dark] .bin-card:hover{box-shadow:0 18px 48px rgba(0,0,0,.38)}
+.hero .btn svg{width:18px;height:18px}
+@media (min-width:761px){nav .nl{margin-left:auto}nav .top-actions{margin-left:8px}}
+@media (max-width:1080px){nav .nl{gap:15px}nav .nl a{font-size:13px}.top-actions>.btn{font-size:13px}}
+@media (max-width:900px){.bins{grid-template-columns:repeat(2,minmax(0,1fr))}.bins .bin-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px);width:100%;justify-self:center}.material-gallery{gap:12px}}
+@media (max-width:760px){nav{flex-wrap:nowrap;gap:8px}.mobile-menu{order:2;margin-left:0}.top-actions{order:1;margin-left:auto;gap:7px}.top-actions>.btn{display:none}.nl{position:absolute;left:0;right:0;top:calc(100% + 10px);order:5;width:100%;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:var(--shadow);padding:10px}.nl a{border-top:0;border-radius:10px;padding:13px 16px}.nl a:hover{background:var(--tag-bg)}.theme-toggle{width:40px;height:40px}.hero{padding-top:137px}.hero-proof{gap:8px 14px}.material-gallery{grid-template-columns:1fr 1fr}.material-gallery .photo-card:last-child{grid-column:1/-1}.bins-intro{display:block}.bins-actions{margin-top:18px}.bins{grid-template-columns:1fr;gap:14px}.bins .bin-card:last-child{grid-column:auto;max-width:none}.bin-card{padding:22px 20px}.bin-visual{height:230px}.bin-shell{height:174px}.bin-wheel{bottom:10px}.bin-card .bin-desc{min-height:0}.photo-copy{padding:13px}.photo-copy strong{font-size:17px}.photo-copy span{font-size:12px}}
+@media (max-width:430px){.material-gallery{grid-template-columns:1fr}.material-gallery .photo-card:last-child{grid-column:auto}.logo{font-size:20px}.logo svg{width:34px;height:34px}.hero .acc .btn{width:100%}.bins-actions{flex-wrap:wrap}.bins-actions .btn{flex:1 1 auto}}
+@media(prefers-reduced-motion:reduce){.bin-fill,.bin-track>i,.bin-falling,.photo-image img,.theme-toggle{animation:none!important;transition:none!important}.bin-falling{display:none}.hero-art .leaf{animation:none}}
+</style><style>.resource-credit{margin:12px 0 0;font-size:12px}.resource-credit a{text-decoration:underline;text-underline-offset:3px}</style><style>@supports not (content-visibility:auto){.photo-card{contain:none}}</style><style>
+/* EcoCiclo Smart · extensión comercial, inclusiones y experiencia móvil */
+:root{--green-accent:#176746;--card-inner:rgba(24,104,65,.05)}
+html[data-theme=dark]{--card-inner:rgba(122,232,164,.07)}
+body{min-width:320px}
+.hero .w{gap:clamp(20px,4vw,58px)}
+.hero-value{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.hero-value span{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--surface);padding:8px 11px;border-radius:999px;font-size:12px;font-weight:700;color:var(--text)}
+.hero-value .ic{width:17px;height:17px;color:var(--accent)}
+.hero-sticker{position:absolute;z-index:4;top:20px;right:18px;display:flex;align-items:center;gap:8px;background:var(--surface);color:var(--text);border:1px solid var(--line);font-size:12px;font-weight:800;padding:9px 13px;border-radius:99px;box-shadow:var(--shadow)}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#32a56b;box-shadow:0 0 0 3px #32a56b20}
+.hero h1 em{font-style:normal;color:var(--accent)}
+#contenedores,#inteligencia,#recoleccion,#llegada,#mantenimiento,#cotizacion{scroll-margin-top:112px}
+#contenedores{background:linear-gradient(180deg,transparent,var(--card-inner),transparent)}
+.bins{align-items:stretch}.bin-card{position:relative;display:flex;flex-direction:column;padding:26px;min-width:0}
+.bin-card h3{min-height:2.25em;font-size:clamp(23px,2.5vw,28px)}
+.bin-card .bin-head{font-size:11px;letter-spacing:.045em}.bin-desc{font-size:14px;line-height:1.55}
+.bin-card .bin-visual{flex-shrink:0}
+.smart-chip{align-self:start;display:flex;align-items:center;gap:6px;border-radius:999px;background:rgba(var(--bin-rgb),.12);border:1px solid rgba(var(--bin-rgb),.25);padding:7px 10px;color:var(--text);font-size:11px;font-weight:800;margin:6px 0 4px}
+.smart-chip .ic{width:16px;height:16px;color:var(--bin)}
+.bin-price{padding:15px 0 13px;margin-top:6px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.bin-price strong{font:700 clamp(27px,2.5vw,34px)/1.25 'Space Grotesk',sans-serif;color:var(--text);white-space:nowrap}
+.bin-price small{font:700 13px Inter,sans-serif;color:var(--sub)}
+.price-eyebrow{display:block;color:var(--sub);font-size:11px;font-weight:650;margin-bottom:3px}
+.included{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:12px;font-weight:800}
+.included .ic{width:15px;height:15px}
+.material-label{font-size:12px;font-weight:750;display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:8px}
+.bin-material{font-size:13px;width:100%;padding:11px 12px;color:var(--text);background:var(--input-bg);border:1px solid var(--line);border-radius:11px}
+.bin-add{margin-top:10px}
+.sensor-response{display:flex;align-items:center;gap:7px;min-height:46px;margin:10px 0;padding:10px 12px;font-size:11px;font-weight:650;line-height:1.5;color:var(--sub);border:1px solid var(--line);border-radius:11px;background:var(--surface-soft)}
+.sensor-response .ic{width:17px;height:17px;flex:none;color:var(--accent)}
+.sensor-response[data-status=success]{background:rgba(30,158,88,.1);color:var(--accent-strong);border-color:rgba(36,164,89,.35)}
+.sensor-response[data-status=error]{background:rgba(194,56,46,.09);color:#a7352c;border-color:rgba(194,56,46,.3)}
+html[data-theme=dark] .sensor-response[data-status=error]{color:#ffb5ac}
+.bin-card.sensor-error .bin-shell{box-shadow:inset 0 0 0 3px #ef715f,inset -7px 0 0 #00000013}
+.bin-buy{width:100%;padding:11px 14px;min-height:48px;background:var(--accent);color:var(--canvas);border:0;font-size:13px;gap:8px}
+.bin-buy:hover{filter:brightness(1.12)}.bin-buy .ic{width:18px;height:18px}
+html[data-theme=light] .bin-buy{background:#176746;color:#fff}
+.bins-intro{align-items:end}.bins-intro .hd{max-width:780px}
+.quote-panel{margin-top:28px;padding:clamp(20px,3vw,34px);border:1px solid var(--line);border-radius:28px;background:var(--surface);box-shadow:var(--shadow);scroll-margin-top:105px}
+.quote-heading{display:flex;justify-content:space-between;gap:22px;align-items:center;margin-bottom:22px}
+.quote-heading h3{font-size:clamp(24px,3vw,34px)}.quote-heading p{font-size:14px;color:var(--sub);max-width:600px;margin:6px 0 0}
+.quote-highlight{font-size:12px;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:15px;background:var(--tag-bg);color:var(--tag-text);font-weight:800;white-space:nowrap}.quote-highlight .ic{width:19px;height:19px}
+.quote-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.67fr);gap:20px}.quote-rows{display:flex;flex-direction:column;gap:9px}
+.quote-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 16px;border-radius:14px;background:var(--surface-soft);border:1px solid var(--line)}.quote-row-name{font-size:14px;font-weight:800}.quote-row-name small{display:block;color:var(--sub);font-weight:500;font-size:11px;margin-top:3px}
+.quote-stepper{display:flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:11px;background:var(--surface);padding:3px;flex:none}
+.quote-stepper button{width:34px;height:34px;border:0;background:var(--tag-bg);color:var(--accent-strong);border-radius:8px;font-size:19px;cursor:pointer;touch-action:manipulation}.quote-stepper button:disabled{opacity:.35;cursor:default}
+.quote-stepper output{width:22px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums;font-size:13px}
+.quote-total{padding:20px;background:var(--card-inner);border-radius:18px;display:flex;align-items:start;flex-direction:column;justify-content:center;border:1px solid var(--line)}.quote-total>span{font-size:13px;color:var(--sub)}.quote-total strong{font:700 clamp(30px,3vw,40px)/1.3 'Space Grotesk',sans-serif;margin:5px 0}.quote-total p{color:var(--sub);font-size:12px;margin:0 0 16px}.quote-total small{color:var(--sub);font-size:11px;line-height:1.55;margin-top:10px}.quote-total .btn{width:100%;font-size:13px;padding-inline:10px}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.tech-section{background:linear-gradient(180deg,var(--card-inner),transparent)}
+.tech-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:clamp(20px,4vw,58px);align-items:center}
+.tech-dashboard{overflow:hidden;padding:25px;min-height:350px}.tech-dash-head{display:flex;align-items:center;gap:13px;padding-bottom:18px;border-bottom:1px solid var(--line)}.tech-dash-head>.ic{width:36px;height:36px;padding:7px;border-radius:12px;background:var(--tag-bg);color:var(--accent)}.tech-dash-head div{display:grid}.tech-dash-head b{font-size:15px}.tech-dash-head span{font-size:11px;color:var(--sub)}.tech-online{margin-left:auto;width:9px;height:9px;border-radius:50%;background:#53c788}
+.tech-dash-body{display:grid;grid-template-columns:.85fr 1fr;align-items:center;gap:8px;padding:22px 0}
+.scan-orbit{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:210px;margin:auto;color:var(--accent)}.scan-orbit>.ic{width:55px;height:55px;z-index:2}.scan-ring{position:absolute;inset:5%;border-radius:50%;border:1px dashed var(--line)}.ring-b{inset:22%;border:2px solid var(--accent);opacity:.5}
+.tech-states{display:grid;gap:10px}.tech-states>div{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:8px;align-items:center;padding:12px;border-radius:12px;background:var(--surface-soft);border:1px solid var(--line);font-size:11px}.tech-states .ic{width:20px;height:20px;grid-row:span 2;color:var(--accent)}.tech-states>div:nth-child(2) .ic{color:#c77b30}.tech-states b{font-size:12px}.tech-states span{color:var(--sub)}.tech-dash-foot{font-size:11px;color:var(--sub);border-top:1px solid var(--line);padding-top:12px}
+.tech-benefits{display:grid;gap:16px}.tech-benefit{display:grid;grid-template-columns:48px minmax(0,1fr);gap:15px;padding:20px;border-radius:20px;background:var(--surface);border:1px solid var(--line)}.tech-benefit>.ic{padding:11px;width:48px;height:48px;color:var(--accent);border-radius:15px;background:var(--tag-bg)}.tech-benefit h3{font-size:17px}.tech-benefit p{color:var(--sub);font-size:13px;margin:8px 0 0}
+.fleet-layout{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}.fleet-photo{position:relative;border-radius:27px;overflow:hidden;min-height:530px;background:linear-gradient(130deg,#1d5638,#b6d6bc)}.fleet-photo img{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.fleet-photo span{position:absolute;left:16px;bottom:16px;background:#11291ed9;color:#fff;font-size:11px;border-radius:999px;padding:8px 14px}
+.fleet-benefits{display:flex;flex-direction:column;gap:12px}.fleet-benefit{padding:19px 20px;display:grid;grid-template-columns:45px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:19px}.fleet-benefit>.ic{width:45px;height:45px;padding:11px;background:var(--tag-bg);border-radius:13px;color:var(--accent)}.fleet-benefit h3{font-size:16px}.fleet-benefit p{font-size:13px;color:var(--sub);line-height:1.6;margin:5px 0 0}.fleet-benefits>.btn{align-self:start;margin-top:4px}
+.arrival-section{background:linear-gradient(180deg,var(--card-inner),transparent)}.arrival-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}.arrival-flow{padding:clamp(18px,3vw,32px)}.arrival-flow-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.arrival-flow-head h3{font-size:23px;margin-top:7px}.preview-label{font-size:10px;letter-spacing:.12em;color:var(--accent);font-weight:800}.preview-badge{font-size:11px;background:var(--tag-bg);color:var(--tag-text);padding:7px 10px;border-radius:50px;font-weight:800}.arrival-status{display:flex;align-items:center;gap:13px;margin:20px 0;padding:18px;background:var(--tag-bg);color:var(--text);border-radius:17px}.arrival-status>.ic{width:30px;height:30px;color:var(--accent)}.arrival-status div{display:grid;gap:2px}.arrival-status span{font-size:11px;color:var(--sub)}.arrival-status strong{font-size:17px}
+.arrival-steps{list-style:none;padding:0;margin:0;display:grid;gap:2px}.arrival-steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;position:relative;padding:0 0 24px;opacity:.52}.arrival-steps li:not(:last-child):after{content:'';position:absolute;left:19px;top:39px;bottom:0;border-left:2px dashed var(--line)}.arrival-steps li.active,.arrival-steps li.done{opacity:1}.step-number{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:800;background:var(--surface-soft)}.arrival-steps li.active .step-number,.arrival-steps li.done .step-number{background:var(--accent);color:var(--canvas);border-color:var(--accent)}html[data-theme=light] .arrival-steps li.active .step-number,html[data-theme=light] .arrival-steps li.done .step-number{color:white}.arrival-steps b{display:block;font-size:15px}.arrival-steps small{color:var(--sub)}.arrival-controls{display:flex;flex-wrap:wrap;gap:10px}.arrival-controls .btn{font-size:13px;padding:10px 15px}.arrival-disclaimer{color:var(--sub);font-size:11px;line-height:1.6;margin:14px 0 0}
+.arrival-visual{border-radius:26px;padding:clamp(24px,4vw,44px);background:linear-gradient(145deg,var(--hero-a),var(--hero-b) 57%,var(--hero-c));border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;gap:18px;overflow:hidden}.arrival-visual h3{font-size:clamp(26px,3vw,38px)}.arrival-visual p{font-size:15px;color:var(--sub);margin:0}.arrival-visual>.btn{align-self:start}.route-decoration{height:205px;position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}.route-stroke{position:absolute;left:12%;right:12%;height:3px;background:repeating-linear-gradient(90deg,var(--accent) 0 13px,transparent 13px 22px);top:50%;opacity:.4}.route-point{width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:var(--surface);border:1px solid var(--line);color:var(--accent);z-index:2}.route-point>.ic{width:29px;height:29px}.route-truck{position:absolute;left:18%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;display:grid;place-items:center;background:var(--accent);border-radius:19px;color:var(--canvas);z-index:3;transition:left .65s ease;box-shadow:var(--shadow)}.route-truck>.ic{width:37px;height:37px}html[data-theme=light] .route-truck{color:#fff}
+.maintenance-panel{border:1px solid var(--line);background:var(--surface);border-radius:28px;padding:clamp(24px,4vw,50px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;overflow:hidden}.maintenance-copy h2{font-size:clamp(29px,4.1vw,47px);max-width:650px}.maintenance-copy>p{color:var(--sub);font-size:16px;max-width:620px}.maintenance-copy>p strong{color:var(--text)}.maintenance-items{display:grid;gap:12px;margin:22px 0}.maintenance-items span{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text)}.maintenance-items .ic{color:var(--accent);width:18px;height:18px}.maintenance-graphic{position:relative;display:grid;place-items:center;min-height:290px}.maintenance-graphic:before{content:'';position:absolute;inset:3%;border:1px dashed var(--line);border-radius:50%}.maintenance-big-icon{width:160px;height:160px;border-radius:38px;display:grid;place-items:center;background:linear-gradient(145deg,#c5e8ce,#e4f2ce);color:#116744;transform:rotate(-8deg);box-shadow:0 15px 35px #1c64312b}.maintenance-big-icon .ic{width:83px;height:83px;transform:rotate(8deg)}.maintenance-small{position:absolute;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:800;background:var(--surface-soft);border:1px solid var(--line);padding:10px;border-radius:13px;box-shadow:var(--shadow);white-space:nowrap}.maintenance-small .ic{width:18px;height:18px;color:var(--accent)}.maintenance-small.one{top:8%;left:0}.maintenance-small.two{bottom:8%;right:0}
+.mobile-quick-nav{display:none}
+@media(max-width:1100px) and (min-width:761px){nav .mobile-menu{display:flex;order:2;margin-left:0}.top-actions{order:1;margin-left:auto}.nl{display:none;position:absolute;top:calc(100% + 9px);left:0;right:0;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:9px;box-shadow:var(--shadow)}.nl.open{display:flex;flex-direction:column;gap:2px}.nl a{padding:11px;border-radius:10px}.nl a:hover{background:var(--tag-bg)}nav{gap:10px}}
+@media(max-width:950px){.bins{grid-template-columns:repeat(2,minmax(0,1fr))}.bins .bin-card:last-child{grid-column:1/-1;max-width:calc(50% - 10px)}.tech-layout,.fleet-layout,.arrival-layout,.maintenance-panel{grid-template-columns:1fr}.fleet-photo{min-height:300px;max-height:440px}.fleet-benefits{display:grid;grid-template-columns:1fr 1fr}.fleet-benefits>.btn{grid-column:1/-1;justify-self:start}.tech-dashboard{min-height:0}.maintenance-graphic{min-height:260px;max-width:460px;width:100%;justify-self:center}}
+@media(max-width:760px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}.bins{grid-template-columns:1fr}.bins .bin-card:last-child{grid-column:auto;max-width:initial}.bin-card h3{min-height:0}.quote-heading{align-items:start;flex-direction:column}.quote-grid{grid-template-columns:1fr}.quote-highlight{white-space:normal}.fleet-benefits{grid-template-columns:1fr}.tech-dash-body{grid-template-columns:1fr 1fr}.wa{bottom:calc(94px + env(safe-area-inset-bottom,0px));right:12px;width:49px;height:49px}.mobile-quick-nav{position:fixed;bottom:0;left:0;right:0;z-index:29;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--surface);border-top:1px solid var(--line);padding:8px 8px calc(7px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 25px #10271d1c}.quick-link{display:flex;min-width:0;min-height:55px;align-items:center;justify-content:center;flex-direction:column;gap:3px;border-radius:13px;color:var(--sub);font-weight:700;font-size:10px}.quick-link .ic{width:22px;height:22px}.quick-link.active,.quick-link[aria-current=location]{background:var(--tag-bg);color:var(--accent-strong)}.quick-link:focus-visible{outline-offset:-2px}.sec{scroll-margin-top:105px}.hero{padding-bottom:30px}.hero-sticker{font-size:10px;padding:7px 9px}.hero-value span{font-size:11px}.arrival-flow-head{align-items:flex-start}.arrival-visual{min-height:360px}}
+@media(max-width:450px){.quote-row{padding:12px;gap:6px}.quote-row-name{font-size:12px;max-width:180px}.quote-row-name small{font-size:10px}.quote-stepper button{height:32px;width:31px}.tech-dash-body{grid-template-columns:1fr}.scan-orbit{max-height:150px}.tech-states{grid-template-columns:1fr 1fr}.tech-states>div{padding:9px}.arrival-controls .btn{flex:1 1 auto}.maintenance-graphic{min-height:210px}.maintenance-big-icon{width:120px;height:120px}.maintenance-big-icon .ic{width:65px;height:65px}.maintenance-small{font-size:9px}.maintenance-small.one{left:-5px}.maintenance-small.two{right:-5px}.bin-card{padding:20px}.hero-value{gap:8px}}
+@media(prefers-reduced-motion:reduce){.route-truck{transition:none}.smart-chip,.scan-ring{animation:none!important}}
+</style><style>.stats .st b{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.035em;overflow-wrap:anywhere}.stats .st span{font-size:13px}.stats .st{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:100px}</style></head>
 <body>
-<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
-
-<nav class="glass">
-<a class="logo" href="#top"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
-  <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
-  <path d="m14 16-3 3 3 3" />
-  <path d="M8.293 13.596 7.196 9.5 3.1 10.598" />
-  <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" />
-  <path d="m13.378 9.633 4.096 1.098 1.097-4.096" /></svg>EcoCiclo</a>
-<div class="nl"><a href="#servicios">Servicios</a><a href="#tres-r">Las 3 R</a><a href="#guia">Guía</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></div>
-<a class="btn b1" href="#contacto">Solicitar recolección</a>
-</nav>
-
+<div aria-hidden="true" class="bg"><i></i><i></i><i></i></div>
+<a class="skip-link" href="#top">Saltar al contenido</a><nav class="glass">
+<a class="logo" href="#top"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path>
+<path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path>
+<path d="m14 16-3 3 3 3"></path>
+<path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path>
+<path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path>
+<path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg>EcoCiclo</a>
+<button aria-controls="siteLinks" aria-expanded="false" aria-label="Abrir menú" class="mobile-menu" id="menuToggle" type="button"><svg class="ic" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><div class="nl" id="siteLinks"><a href="#contenedores">Productos</a><a href="#inteligencia">Tecnología</a><a href="#recoleccion">Recolección</a><a href="#mantenimiento">Mantenimiento</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></div>
+<div class="top-actions">
+<button aria-label="Cambiar a modo oscuro" aria-pressed="false" class="theme-toggle" id="themeToggle" title="Cambiar tema" type="button">
+<svg aria-hidden="true" class="moon" viewbox="0 0 24 24"><path d="M20.6 14.4A9 9 0 0 1 9.6 3.4 9 9 0 1 0 20.6 14.4Z"></path></svg>
+<svg aria-hidden="true" class="sun" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+</button><a class="btn b1" href="#cotizacion">Cotizar contenedores</a></div></nav>
 <main id="top">
 <section class="hero"><div class="w">
 <div>
 <div class="pill glass">Nuestro lema: <b>Reducir · Reutilizar · Reciclar</b></div>
-<h1>Lo que ya no usas puede tener otra vida.</h1>
-<p>Recogemos, clasificamos y damos destino responsable a tu papel, plástico, vidrio, metal y electrónicos. Tú separas, nosotros hacemos el resto.</p>
-<div class="acc"><a class="btn b1" href="#contacto">Agenda una recolección</a><a class="btn b2" href="#servicios">Ver servicios</a></div>
-</div>
-<div class="hv glass">
-<div class="lt" role="img" aria-label="Ciclo de reciclaje animado"><div id="lo1"></div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
-  <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
-  <path d="m14 16-3 3 3 3" />
-  <path d="M8.293 13.596 7.196 9.5 3.1 10.598" />
-  <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" />
-  <path d="m13.378 9.633 4.096 1.098 1.097-4.096" /></svg></div>
+<h1>Una forma <em>inteligente</em> de reciclar. Un servicio que hace el resto.</h1>
+<p>Elija su contenedor inteligente por $2,500 MXN. Cada compra incluye el servicio de recolección con personal privado y atención directa de EcoCiclo.</p><div class="hero-value"><span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg> $2,500 MXN por unidad</span><span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg> Recolección incluida</span><span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path><path d="m9 12 2 2 4-4"></path></svg> Detección de residuos incorrectos</span></div>
+<div class="acc"><a class="btn b1" href="#contenedores">Conocer contenedores <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></a><a class="btn b2" href="#recoleccion">Cómo funciona el servicio</a></div>
+<div aria-label="Beneficios" class="hero-proof">
+<span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>Separación fácil</span>
+<span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m3 12 6 6L21 6"></path></svg>Atención directa</span>
+<span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3c-3 4-6 6-6 11a6 6 0 0 0 12 0c0-5-3-7-6-11Z"></path></svg>Reciclaje responsable</span>
+</div></div>
+<div class="hv glass"><svg aria-hidden="true" class="hero-art" viewbox="0 0 520 500"><path d="M0 420Q130 350 260 430T520 400V500H0Z" fill="#b7dfba"></path><path d="M0 455Q140 410 260 465T520 435V500H0Z" fill="#8fc99f"></path><g class="leaf"><path d="M66 335Q-5 260 68 196Q133 270 66 335" fill="#66b67a"></path><path d="M66 335Q150 244 189 291Q164 360 66 335" fill="#3d9767"></path><path d="M66 335V408" stroke="#387f55" stroke-width="7"></path></g><g class="leaf"><path d="M438 344Q365 255 438 210Q500 285 438 344" fill="#75bf87"></path><path d="M438 344Q493 280 518 319Q507 372 438 344" fill="#3b9b66"></path><path d="M438 344V416" stroke="#387f55" stroke-width="7"></path></g><circle cx="410" cy="103" fill="#f6d06d" opacity=".75" r="29"></circle><circle cx="100" cy="102" fill="#79bd91" r="8"></circle><circle cx="124" cy="76" fill="#79bd91" r="5"></circle></svg>
+<div aria-label="Ciclo de reciclaje animado" class="lt" role="img"><div id="lo1"></div><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path>
+<path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path>
+<path d="m14 16-3 3 3 3"></path>
+<path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path>
+<path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path>
+<path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg></div>
 <div class="tr"><span>Reducir</span><span>Reutilizar</span><span>Reciclar</span></div>
-</div>
+<div class="hero-sticker"><span class="status-dot"></span> Sistema EcoCiclo Smart</div></div>
 </div></section>
-
 <div class="w rv"><div class="stats glass">
-<div class="st"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18" />
-  <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
-  <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
-  <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
-  <path d="M7 21h10" /></svg><b data-n="1200">1200</b><span>kg reciclados</span></div>
-<div class="st"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-  <circle cx="9" cy="7" r="4" /></svg><b data-n="85">85</b><span>familias atendidas</span></div>
-<div class="st"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h4" />
-  <path d="M10 8h4" />
-  <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
-  <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
-  <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" /></svg><b data-n="12">12</b><span>empresas aliadas</span></div>
-<div class="st"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
-  <path d="M7 16v6" />
-  <path d="M13 19v3" />
-  <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" /></svg><b data-n="30">30</b><span>árboles equivalentes</span></div>
-</div><p class="note">Cifras de ejemplo para el proyecto.</p></div>
-
+<div class="st"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3v18"></path>
+<path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path>
+<path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path>
+<path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path>
+<path d="M7 21h10"></path></svg><b>3</b><span>Modelos inteligentes</span></div>
+<div class="st"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<circle cx="9" cy="7" r="4"></circle></svg><b>$2,500</b><span>MXN por contenedor</span></div>
+<div class="st"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M10 12h4"></path>
+<path d="M10 8h4"></path>
+<path d="M14 21v-3a2 2 0 0 0-4 0v3"></path>
+<path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path>
+<path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg><b>Incluida</b><span>Recolección privada</span></div>
+<div class="st"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"></path>
+<path d="M7 16v6"></path>
+<path d="M13 19v3"></path>
+<path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"></path></svg><b>Sin costo</b><span>Mantenimiento del equipo recolector</span></div>
+</div><p class="note">Compra de cada contenedor: $2,500 MXN. Consulte la cobertura y las condiciones de recolección al solicitar.</p></div>
 <section class="sec" id="servicios"><div class="w rv">
-<div class="hd"><span class="eb">Servicios</span><h2>Reciclar sin complicaciones</h2><p>Elige la opción que mejor se adapte a ti. Toca una tarjeta para ver los detalles.</p></div>
+<div class="hd"><span class="eb">Servicios</span><h2>Reciclar sin complicaciones</h2><p>Además de la compra de contenedores, estas son las modalidades y soluciones de EcoCiclo.</p></div>
 <div class="grid">
-<div class="gc glass sv" data-s="0"><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
-  <path d="M15 18H9" />
-  <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
-  <circle cx="17" cy="18" r="2" />
-  <circle cx="7" cy="18" r="2" /></svg></div><h3>Recolección a domicilio</h3><p>Pasamos por tu casa el día que acordemos. Sin viajes ni cargar bolsas.</p><button class="mas" type="button">Ver más <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg></button></div>
-<div class="gc glass sv" data-s="1"><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-  <circle cx="12" cy="10" r="3" /></svg></div><h3>Centro de acopio</h3><p>Lleva tus materiales a nuestro punto de recepción cuando te acomode.</p><button class="mas" type="button">Ver más <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg></button></div>
-<div class="gc glass sv" data-s="2"><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h4" />
-  <path d="M10 8h4" />
-  <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
-  <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
-  <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" /></svg></div><h3>Plan para empresas</h3><p>Contenedores, rutas periódicas y reportes de lo reciclado.</p><button class="mas" type="button">Ver más <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg></button></div>
-<div class="gc glass sv" data-s="3"><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v2" />
-  <path d="M12 2v2" />
-  <path d="M17 20v2" />
-  <path d="M17 2v2" />
-  <path d="M2 12h2" />
-  <path d="M2 17h2" />
-  <path d="M2 7h2" />
-  <path d="M20 12h2" />
-  <path d="M20 17h2" />
-  <path d="M20 7h2" />
-  <path d="M7 20v2" />
-  <path d="M7 2v2" />
-  <rect x="4" y="4" width="16" height="16" rx="2" />
-  <rect x="8" y="8" width="8" height="8" rx="1" /></svg></div><h3>Electrónicos y especiales</h3><p>Celulares, cables y aparatos viejos con disposición responsable.</p><button class="mas" type="button">Ver más <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></svg></button></div>
-</div></div></section>
-
+<div aria-label="Ver detalles del servicio Recolección a domicilio" class="gc glass sv" data-s="0" role="button" tabindex="0"><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+<path d="M15 18H9"></path>
+<path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+<circle cx="17" cy="18" r="2"></circle>
+<circle cx="7" cy="18" r="2"></circle></svg></div><h3>Recolección a domicilio</h3><p>Recolección con nuestros recolectores privados, incluida al adquirir un contenedor inteligente.</p><button class="mas" type="button">Ver más <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path></svg></button></div>
+<div aria-label="Ver detalles del servicio Centro de acopio" class="gc glass sv" data-s="1" role="button" tabindex="0"><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+<circle cx="12" cy="10" r="3"></circle></svg></div><h3>Centro de acopio</h3><p>Lleva tus materiales a nuestro punto de recepción cuando te acomode.</p><button class="mas" type="button">Ver más <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path></svg></button></div>
+<div aria-label="Ver detalles del servicio Plan para empresas" class="gc glass sv" data-s="2" role="button" tabindex="0"><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M10 12h4"></path>
+<path d="M10 8h4"></path>
+<path d="M14 21v-3a2 2 0 0 0-4 0v3"></path>
+<path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path>
+<path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg></div><h3>Plan para empresas</h3><p>Contenedores inteligentes para empresas y coordinación de recolección con personal propio.</p><button class="mas" type="button">Ver más <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path></svg></button></div>
+<div aria-label="Ver detalles del servicio Electrónicos y especiales" class="gc glass sv" data-s="3" role="button" tabindex="0"><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 20v2"></path>
+<path d="M12 2v2"></path>
+<path d="M17 20v2"></path>
+<path d="M17 2v2"></path>
+<path d="M2 12h2"></path>
+<path d="M2 17h2"></path>
+<path d="M2 7h2"></path>
+<path d="M20 12h2"></path>
+<path d="M20 17h2"></path>
+<path d="M20 7h2"></path>
+<path d="M7 20v2"></path>
+<path d="M7 2v2"></path>
+<rect height="16" rx="2" width="16" x="4" y="4"></rect>
+<rect height="8" rx="1" width="8" x="8" y="8"></rect></svg></div><h3>Electrónicos y especiales</h3><p>Celulares, cables y aparatos viejos con disposición responsable.</p><button class="mas" type="button">Ver más <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path></svg></button></div>
+</div></div></section><section aria-labelledby="materiales-titulo" class="sec" id="materiales"><div class="w rv">
+<div class="hd"><span class="eb">Materiales</span><h2 id="materiales-titulo">Materiales que vuelven al ciclo</h2><p>El papel, el plástico y otros materiales pueden recuperar valor cuando se separan correctamente.</p></div>
+<div class="material-gallery">
+<article class="photo-card"><div class="photo-image"><svg aria-hidden="true" class="photo-fallback" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 72 72"><rect height="34" rx="3" width="34" x="19" y="20"></rect><path d="M19 28h34M28 20v34M44 20v34M26 14h20"></path></svg><img alt="Cartón recolectado y apilado para reciclaje" class="real-photo" decoding="async" height="506" loading="lazy" src="https://images.unsplash.com/photo-1719600804011-3bff3909b183?auto=format&amp;fit=crop&amp;w=800&amp;q=72" width="800"/></div><div class="photo-copy"><strong>Papel y cartón</strong><span>Secos, limpios y aplanados.</span></div></article>
+<article class="photo-card"><div class="photo-image"><svg aria-hidden="true" class="photo-fallback" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 72 72"><path d="M26 9h20v9l-5 7v8l7 16v9H24v-9l7-16v-8l-5-7z"></path><path d="M25 43h22M26 14h20"></path></svg><img alt="Botellas de plástico clasificadas para reciclaje" class="real-photo" decoding="async" height="506" loading="lazy" src="https://images.unsplash.com/photo-1743342716826-1fb32cc467d9?auto=format&amp;fit=crop&amp;w=800&amp;q=72" width="800"/></div><div class="photo-copy"><strong>Plásticos</strong><span>Envases enjuagados y separados.</span></div></article>
+<article class="photo-card"><div class="photo-image"><svg aria-hidden="true" class="photo-fallback" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 72 72"><path d="M24 22h24l4 33H20zM26 16h20M30 16V9h12v7M26 32h20M32 38v11m8-11v11"></path></svg><img alt="Montón de envases y latas destinados al reciclaje" class="real-photo" decoding="async" height="506" loading="lazy" src="https://images.unsplash.com/photo-1710189605149-6cb6b81e5e9e?auto=format&amp;fit=crop&amp;w=800&amp;q=72" width="800"/></div><div class="photo-copy"><strong>Metales y latas</strong><span>Materiales que pueden recuperarse.</span></div></article>
+</div><p class="photo-sources">Fotografías: <a href="https://unsplash.com/photos/a-pile-of-cardboard-sitting-on-top-of-a-wooden-floor-quTvuVu0ghQ" rel="noopener noreferrer" target="_blank">Mel —</a> · <a href="https://unsplash.com/photos/plastic-bottles-are-ready-for-recycling-ARCS27AGiSs" rel="noopener noreferrer" target="_blank">Marija Zaric</a> · <a href="https://unsplash.com/photos/a-large-pile-of-plastic-bottles-and-cans-WZ6Z6x4zLV4" rel="noopener noreferrer" target="_blank">Elbert Lora</a>. Imágenes sujetas a conexión.</p>
+</div></section>
 <section class="sec" id="tres-r"><div class="w rv">
 <div class="hd"><span class="eb">Nuestro lema</span><h2>Las 3 R: el orden importa</h2><p>Reciclar es el último paso. Antes hay dos hábitos que reducen aún más la basura.</p></div>
 <div class="grid">
-<div class="gc glass"><span class="num">01</span><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
-  <path d="M8 12h8" /></svg></div><h3>Reducir</h3><p>Consume solo lo necesario: menos empaques, menos desechables, menos compras impulsivas.</p></div>
-<div class="gc glass"><span class="num">02</span><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4" />
-  <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
-  <path d="m7 22-4-4 4-4" />
-  <path d="M21 13v1a4 4 0 0 1-4 4H3" /></svg></div><h3>Reutilizar</h3><p>Dale otro uso a frascos, bolsas, cajas y ropa. Repara en lugar de reemplazar.</p></div>
-<div class="gc glass"><span class="num">03</span><div class="chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
-  <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
-  <path d="m14 16-3 3 3 3" />
-  <path d="M8.293 13.596 7.196 9.5 3.1 10.598" />
-  <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" />
-  <path d="m13.378 9.633 4.096 1.098 1.097-4.096" /></svg></div><h3>Reciclar</h3><p>Lo que ya no pueda reducirse ni reutilizarse, nos lo traes y vuelve a ser materia prima.</p></div>
+<div class="gc glass"><span class="num">01</span><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle>
+<path d="M8 12h8"></path></svg></div><h3>Reducir</h3><p>Consume solo lo necesario: menos empaques, menos desechables, menos compras impulsivas.</p></div>
+<div class="gc glass"><span class="num">02</span><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m17 2 4 4-4 4"></path>
+<path d="M3 11v-1a4 4 0 0 1 4-4h14"></path>
+<path d="m7 22-4-4 4-4"></path>
+<path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div><h3>Reutilizar</h3><p>Dale otro uso a frascos, bolsas, cajas y ropa. Repara en lugar de reemplazar.</p></div>
+<div class="gc glass"><span class="num">03</span><div class="chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path>
+<path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path>
+<path d="m14 16-3 3 3 3"></path>
+<path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path>
+<path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"></path>
+<path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path></svg></div><h3>Reciclar</h3><p>Lo que ya no pueda reducirse ni reutilizarse, nos lo traes y vuelve a ser materia prima.</p></div>
 </div>
-<div class="lema glass"><div class="lt"><div id="lo2"></div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20" />
-  <path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13" /></svg></div><div><p>Reduce lo que consumes. Reutiliza lo que tienes. Recicla lo que sobra.</p><small>Las tres R son nuestro lema y la forma en que trabajamos todos los días.</small></div></div>
+<div class="lema glass"><div class="lt"><div id="lo2"></div><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20"></path>
+<path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13"></path></svg></div><div><p>Reduce lo que consumes. Reutiliza lo que tienes. Recicla lo que sobra.</p><small>Las tres R son nuestro lema y la forma en que trabajamos todos los días.</small></div></div>
 </div></section>
-
-<section class="sec" id="guia"><div class="w rv">
-<div class="hd"><span class="eb">Guía</span><h2>¿Qué va en cada contenedor?</h2><p>Separar bien es la mitad del trabajo.</p></div>
+<section aria-labelledby="bins-title" class="sec" id="contenedores"><div class="w rv">
+<div class="bins-intro"><div class="hd"><span class="eb">Nuestra línea de productos</span><h2 id="bins-title">Tres contenedores inteligentes. Una solución completa.</h2><p>Elija el modelo adecuado para sus residuos. Cada uno cuesta $2,500 MXN e incluye el servicio de recolección de EcoCiclo.</p></div>
+<div class="bins-actions"><button class="btn b2" id="demoBins" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"></path><path d="m19 17 .6 1.5L21 19l-1.4.5L19 21l-.6-1.5L17 19l1.4-.5L19 17Z"></path></svg> Ver llenado</button><button class="btn b2" id="resetBins" type="button">Vaciar demostración</button></div></div>
+<div class="bins"><article class="bin-card organic" data-bin="organic" data-level="0" data-name="Orgánico">
+<div class="bin-head">Contenedor inteligente · Residuo orgánico</div><h3>Orgánico</h3><p class="bin-desc">Frutas, verduras, hojas secas y residuos biodegradables.</p>
+<div class="smart-chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg> Sensor inteligente</div><div aria-hidden="true" class="bin-visual"><div class="bin-lid"></div><div class="bin-shell"><div class="bin-window"><div class="bin-fill"></div></div><div class="bin-symbol"><svg viewbox="0 0 24 24"><path d="M20 4c-8 0-14 4-14 11a5 5 0 0 0 5 5c7 0 11-8 9-16ZM4 21c2-5 7-9 12-12"></path></svg></div></div><div class="bin-wheel l"></div><div class="bin-wheel r"></div></div>
+<div class="bin-meter"><span>Llenado de demostración</span><output aria-label="Nivel de llenado">0%</output></div><div aria-label="Llenado de contenedor Orgánico" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="bin-track" role="progressbar"><i></i></div><div class="bin-price"><div><span class="price-eyebrow">Precio por unidad</span><strong>$2,500 <small>MXN</small></strong></div><span class="included"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> Recolección incluida</span></div><label class="material-label">Pruebe la clasificación<select aria-label="Seleccionar residuo para Orgánico" class="bin-material"><option value="organic">Cáscaras de fruta</option><option value="recyclable">Botella PET</option><option value="recyclable">Papel y cartón</option><option value="nonrecyclable">Envoltura sucia</option><option value="nonrecyclable">Residuo sanitario</option></select></label>
+<button aria-label="Depositar un residuo en Orgánico" class="bin-add" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg> Probar detección</button><div aria-live="polite" class="sensor-response" role="status"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg> Sensor preparado para validar el residuo.</div><button class="btn bin-buy" data-purchase="organic" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg> Agregar a mi solicitud</button>
+</article><article class="bin-card recyclable" data-bin="recyclable" data-level="0" data-name="Inorgánico reciclable">
+<div class="bin-head">Contenedor inteligente · Material reciclable</div><h3>Inorgánico reciclable</h3><p class="bin-desc">Papel, cartón, PET, vidrio y metales limpios.</p>
+<div class="smart-chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg> Sensor inteligente</div><div aria-hidden="true" class="bin-visual"><div class="bin-lid"></div><div class="bin-shell"><div class="bin-window"><div class="bin-fill"></div></div><div class="bin-symbol"><svg viewbox="0 0 24 24"><path d="M8 3h8M9 3v4l-3 4v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9l-3-4V3M6 13h12M10 16h4"></path></svg></div></div><div class="bin-wheel l"></div><div class="bin-wheel r"></div></div>
+<div class="bin-meter"><span>Llenado de demostración</span><output aria-label="Nivel de llenado">0%</output></div><div aria-label="Llenado de contenedor Inorgánico reciclable" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="bin-track" role="progressbar"><i></i></div><div class="bin-price"><div><span class="price-eyebrow">Precio por unidad</span><strong>$2,500 <small>MXN</small></strong></div><span class="included"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> Recolección incluida</span></div><label class="material-label">Pruebe la clasificación<select aria-label="Seleccionar residuo para Inorgánico reciclable" class="bin-material"><option value="organic">Cáscaras de fruta</option><option value="recyclable">Botella PET</option><option value="recyclable">Papel y cartón</option><option value="nonrecyclable">Envoltura sucia</option><option value="nonrecyclable">Residuo sanitario</option></select></label>
+<button aria-label="Depositar un residuo en Inorgánico reciclable" class="bin-add" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg> Probar detección</button><div aria-live="polite" class="sensor-response" role="status"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg> Sensor preparado para validar el residuo.</div><button class="btn bin-buy" data-purchase="recyclable" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg> Agregar a mi solicitud</button>
+</article><article class="bin-card nonrecyclable" data-bin="nonrecyclable" data-level="0" data-name="Inorgánico no reciclable">
+<div class="bin-head">Contenedor inteligente · Residuo no reciclable</div><h3>Inorgánico no reciclable</h3><p class="bin-desc">Envolturas sucias y residuos inorgánicos no aprovechables.</p>
+<div class="smart-chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg> Sensor inteligente</div><div aria-hidden="true" class="bin-visual"><div class="bin-lid"></div><div class="bin-shell"><div class="bin-window"><div class="bin-fill"></div></div><div class="bin-symbol"><svg viewbox="0 0 24 24"><rect height="15" rx="2" width="14" x="5" y="6"></rect><path d="M3 6h18M9 6V3h6v3M10 10v7M14 10v7"></path></svg></div></div><div class="bin-wheel l"></div><div class="bin-wheel r"></div></div>
+<div class="bin-meter"><span>Llenado de demostración</span><output aria-label="Nivel de llenado">0%</output></div><div aria-label="Llenado de contenedor Inorgánico no reciclable" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="bin-track" role="progressbar"><i></i></div><div class="bin-price"><div><span class="price-eyebrow">Precio por unidad</span><strong>$2,500 <small>MXN</small></strong></div><span class="included"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> Recolección incluida</span></div><label class="material-label">Pruebe la clasificación<select aria-label="Seleccionar residuo para Inorgánico no reciclable" class="bin-material"><option value="organic">Cáscaras de fruta</option><option value="recyclable">Botella PET</option><option value="recyclable">Papel y cartón</option><option value="nonrecyclable">Envoltura sucia</option><option value="nonrecyclable">Residuo sanitario</option></select></label>
+<button aria-label="Depositar un residuo en Inorgánico no reciclable" class="bin-add" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg> Probar detección</button><div aria-live="polite" class="sensor-response" role="status"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg> Sensor preparado para validar el residuo.</div><button class="btn bin-buy" data-purchase="nonrecyclable" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg> Agregar a mi solicitud</button>
+</article></div>
+<p class="bin-note"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m12 3 10 18H2L12 3Z"></path><path d="M12 9v5m0 3h.01"></path></svg><span><b>Demostración interactiva:</b> el llenado y la identificación de residuos de esta página son simulados. No existe conexión con sensores ni telemetría real. La cobertura y periodicidad del servicio se confirman al contratar.</span></p>
+<div aria-live="polite" class="bins-feedback" id="binsFeedback" role="status"></div><section aria-labelledby="quoteTitle" class="quote-panel" id="cotizacion">
+<div class="quote-heading"><div><span class="eb">Solicitud de compra</span><h3 id="quoteTitle">Arme su paquete EcoCiclo</h3><p>Seleccione sus unidades y envíe la solicitud. El servicio de recolección está incluido con cada contenedor.</p></div><span class="quote-highlight"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg> Recolección incluida</span></div>
+<div class="quote-grid"><div class="quote-rows" id="quoteRows"></div>
+<div class="quote-total"><span>Total estimado de contenedores</span><strong id="quoteTotal">$0 MXN</strong><p id="quoteDetail">Seleccione uno o más contenedores.</p><button class="btn b1" disabled="" id="requestQuote" type="button">Solicitar compra por WhatsApp <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></button><small>No se cobra en este sitio; su solicitud se envía por WhatsApp para confirmación.</small></div></div>
+</section>
+</div></section><section class="sec tech-section" id="inteligencia"><div class="w rv">
+<div class="hd"><span class="eb">Tecnología EcoCiclo Smart</span><h2>Sus residuos, en el contenedor correcto.</h2><p>Los tres modelos están concebidos para identificar depósitos que no corresponden a su categoría y emitir una alerta.</p></div>
+<div class="tech-layout"><div class="tech-dashboard glass"><div class="tech-dash-head"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg><div><b>Monitor inteligente</b><span>Vista conceptual del producto</span></div><i class="tech-online"></i></div><div class="tech-dash-body"><div class="scan-orbit"><span class="scan-ring ring-a"></span><span class="scan-ring ring-b"></span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 7h16M4 17h16M9 4v6m6 4v6"></path></svg></div><div class="tech-states"><div><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> <span>Residuo compatible</span><b>Clasificación correcta</b></div><div><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m12 3 10 18H2L12 3Z"></path><path d="M12 9v5m0 3h.01"></path></svg> <span>Residuo equivocado</span><b>Señal de alerta</b></div></div></div><div class="tech-dash-foot">Simulación visual · Sin hardware conectado</div></div>
+<div class="tech-benefits"><article class="tech-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="14" x="5" y="5"></rect><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4"></path></svg><div><h3>Detección de residuos incorrectos</h3><p>Si un objeto no pertenece a la categoría del contenedor, el sistema inteligente contempla identificarlo y avisar.</p></div></article><article class="tech-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg><div><h3>Indicadores de llenado</h3><p>El nivel de llenado forma parte de la experiencia visual de cada modelo. La lectura real depende de la implementación de sensores.</p></div></article><article class="tech-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path><path d="m9 12 2 2 4-4"></path></svg><div><h3>Separación con mayor control</h3><p>Orgánicos, inorgánicos reciclables e inorgánicos no reciclables se distinguen desde el primer depósito.</p></div></article></div></div></div></section><section class="sec fleet-section" id="recoleccion"><div class="w rv"><div class="hd"><span class="eb">Servicio incluido con su compra</span><h2>Recolectores privados. Atención de principio a fin.</h2><p>Con cada contenedor EcoCiclo obtiene acceso a nuestro servicio de recolección, atendido por personal recolector privado.</p></div>
+<div class="fleet-layout"><div class="fleet-photo"><img alt="Trabajadores del servicio de recolección operando un vehículo para residuos" decoding="async" height="800" loading="lazy" src="https://images.unsplash.com/photo-1574974671999-24b7dfbb0d53?auto=format&amp;fit=crop&amp;w=1100&amp;q=76" width="1100"/><span>Imagen ilustrativa del servicio</span></div>
+<div class="fleet-benefits"><article class="fleet-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg><div><h3>Personal recolector propio</h3><p>Recolección realizada por recolectores privados de EcoCiclo, sin dejar todo en manos del cliente.</p></div></article><article class="fleet-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="5"></rect><path d="M7 3v4m10-4v4M3 10h18"></path></svg><div><h3>Solicite y coordine su visita</h3><p>Comparta su dirección, los materiales y sus preferencias para acordar la recolección.</p></div></article><article class="fleet-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><div><h3>Información de llegada</h3><p>Una secuencia clara de solicitud, asignación, recorrido y llegada del recolector.</p></div></article><article class="fleet-benefit"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"></path><path d="M4 13H2v6h4v-6H4zm16 0h2v6h-4v-6h2zM18 20a5 5 0 0 1-5 2h-2"></path></svg><div><h3>Atención directa por WhatsApp</h3><p>Contacto para solicitar compras, resolver dudas y coordinar recolecciones.</p></div></article><a class="btn b1" href="#contacto">Solicitar recolección <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></a></div></div></div></section><section class="sec arrival-section" id="llegada"><div class="w rv"><div class="hd"><span class="eb">Llegada del recolector</span><h2>Sepa qué ocurre antes de la visita.</h2><p>Así se comunicaría el avance de una recolección. El recorrido mostrado es demostrativo: todavía no hay rastreo GPS ni pedidos activos.</p></div>
+<div class="arrival-layout"><div class="arrival-flow glass"><div class="arrival-flow-head"><div><span class="preview-label">VISTA PREVIA DEL SERVICIO</span><h3>Seguimiento de recolección</h3></div><span class="preview-badge">Simulación</span></div><div class="arrival-status"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg><div><span>Estado ilustrativo</span><strong id="arrivalCurrent">Solicitud registrada</strong></div></div><ol class="arrival-steps" id="arrivalSteps"><li aria-current="step" class="active"><span class="step-number">1</span><div><b>Solicitud</b><small>Registro de la visita</small></div></li><li><span class="step-number">2</span><div><b>Asignación</b><small>Recolector privado asignado</small></div></li><li><span class="step-number">3</span><div><b>En camino</b><small>El recolector se dirige al punto</small></div></li><li><span class="step-number">4</span><div><b>Llegada</b><small>El recolector llega y realiza el retiro</small></div></li></ol><div class="arrival-controls"><button class="btn b1" id="advanceArrival" type="button">Ver siguiente etapa <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></button><button class="btn b2" id="resetArrival" type="button">Reiniciar</button></div><p class="arrival-disclaimer">Estados exclusivamente de demostración; no se muestran ubicaciones, tiempos ni personal reales.</p></div>
+<div class="arrival-visual"><div class="route-decoration"><span class="route-point point-start"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3z"></path></svg></span><span class="route-stroke"></span><span class="route-truck"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg></span><span class="route-point point-end"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span></div><h3>De su solicitud a la puerta de su casa.</h3><p>La compra del contenedor incorpora nuestro servicio de recolección. Para agendar una visita, contacte al equipo EcoCiclo.</p><a class="btn b2" href="#contacto">Coordinar mi visita <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></a></div></div></div></section><section class="sec maintenance-section" id="mantenimiento"><div class="w rv"><div class="maintenance-panel"><div class="maintenance-copy"><span class="eb">Mantenimiento incluido</span><h2>El equipo recolector también cuenta con respaldo.</h2><p>El servicio EcoCiclo contempla <strong>mantenimiento gratuito para cada equipo recolector</strong>, como parte de la operación del servicio.</p><div class="maintenance-items"><span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> Sin cargo adicional de mantenimiento del equipo recolector</span><span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> Servicio de recolección asociado a la compra</span><span><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg> Atención directa para coordinar el servicio</span></div><a class="btn b1" href="#contacto">Consultar cobertura y condiciones <svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"></path></svg></a></div><div class="maintenance-graphic"><div class="maintenance-big-icon"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M14 7a5 5 0 0 0-6 6L2 19l3 3 6-6a5 5 0 0 0 6-6l-3 3-3-3 3-3Z"></path></svg></div><div class="maintenance-small one"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"></path><path d="m9 12 2 2 4-4"></path></svg> Equipo respaldado</div><div class="maintenance-small two"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg> Recolección privada</div></div></div></div></section><section class="sec" id="guia"><div class="w rv">
+<div class="hd"><span class="eb">Guía</span><h2>¿Qué va en cada contenedor?</h2><p>Use esta guía de materiales para separar correctamente antes del depósito en su contenedor inteligente.</p></div>
 <div class="grid">
-<div class="gc glass"><div class="cb" style="background:#3B82C4;color:#fff"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5" />
-  <path d="M18 14h-8" />
-  <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" />
-  <rect width="8" height="4" x="10" y="6" rx="1" /></svg></div><h3>Azul</h3><p>Papel, cartón, periódico y cajas aplanadas.</p></div>
-<div class="gc glass"><div class="cb" style="background:#3E9B58;color:#fff"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 22h8" />
-  <path d="M7 10h10" />
-  <path d="M12 15v7" />
-  <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z" /></svg></div><h3>Verde</h3><p>Botellas y frascos de vidrio, sin tapas.</p></div>
-<div class="gc glass"><div class="cb" style="background:#E8B931;color:#10281F"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8" />
-  <path d="M5 8h14" />
-  <path d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0" />
-  <path d="m12 8 1-6h2" /></svg></div><h3>Amarillo</h3><p>Botellas PET, envases de plástico y latas.</p></div>
-<div class="gc glass"><div class="cb" style="background:#6B7280;color:#fff"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 7-3 5h4l-3 5" />
-  <path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" />
-  <path d="M22 14v-4" />
-  <path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" /></svg></div><h3>Gris</h3><p>Electrónicos, pilas y cables (entrega aparte).</p></div>
+<div class="gc glass"><div class="cb" style="background:#3B82C4;color:#fff"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M15 18h-5"></path>
+<path d="M18 14h-8"></path>
+<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path>
+<rect height="4" rx="1" width="8" x="10" y="6"></rect></svg></div><h3>Azul</h3><p>Papel, cartón, periódico y cajas aplanadas.</p></div>
+<div class="gc glass"><div class="cb" style="background:#3E9B58;color:#fff"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M8 22h8"></path>
+<path d="M7 10h10"></path>
+<path d="M12 15v7"></path>
+<path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path></svg></div><h3>Verde</h3><p>Botellas y frascos de vidrio, sin tapas.</p></div>
+<div class="gc glass"><div class="cb" style="background:#E8B931;color:#10281F"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8"></path>
+<path d="M5 8h14"></path>
+<path d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0"></path>
+<path d="m12 8 1-6h2"></path></svg></div><h3>Amarillo</h3><p>Botellas PET, envases de plástico y latas.</p></div>
+<div class="gc glass"><div class="cb" style="background:#6B7280;color:#fff"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m11 7-3 5h4l-3 5"></path>
+<path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935"></path>
+<path d="M22 14v-4"></path>
+<path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936"></path></svg></div><h3>Gris</h3><p>Electrónicos, pilas y cables (entrega aparte).</p></div>
 </div>
 <div class="yn">
-<div class="gc glass ok"><h3>Sí recibimos</h3><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Envases limpios y secos</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Cartón aplanado</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Latas enjuagadas</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Aparatos electrónicos</li></ul></div>
-<div class="gc glass no"><h3>No recibimos</h3><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg>Residuos orgánicos o comida</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg>Papel sucio de grasa</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg>Pañales y residuos sanitarios</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg>Vidrio roto o espejos</li></ul></div>
+<div class="gc glass ok"><h3>Sí recibimos</h3><ul><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>Envases limpios y secos</li><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>Cartón aplanado</li><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>Latas enjuagadas</li><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>Aparatos electrónicos</li></ul></div>
+<div class="gc glass no"><h3>Requieren manejo especial</h3><ul><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18"></path>
+<path d="m6 6 12 12"></path></svg>Orgánicos: solo al contenedor Orgánico</li><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18"></path>
+<path d="m6 6 12 12"></path></svg>Papel grasoso: separar del material reciclable</li><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18"></path>
+<path d="m6 6 12 12"></path></svg>Sanitarios: solo al inorgánico no reciclable</li><li><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18"></path>
+<path d="m6 6 12 12"></path></svg>Vidrio roto: consultar manejo seguro</li></ul></div>
 </div></div></section>
-
 <section class="sec"><div class="w rv">
-<div class="hd"><span class="eb">Proceso</span><h2>Así de simple</h2></div>
-<div class="grid">
-<div class="gc glass"><span class="num">PASO 1</span><h3>Separa</h3><p>Junta tus materiales limpios y secos, por tipo.</p></div>
-<div class="gc glass"><span class="num">PASO 2</span><h3>Agenda</h3><p>Escríbenos, elige fecha y confirma.</p></div>
-<div class="gc glass"><span class="num">PASO 3</span><h3>Recicla</h3><p>Clasificamos y enviamos todo a su nuevo ciclo.</p></div>
+<div class="hd"><span class="eb">Proceso</span><h2>Así funciona EcoCiclo</h2></div>
+<div class="process">
+<div class="gc glass"><span class="num">01</span><h3>Elija</h3><p>Seleccione su contenedor inteligente desde $2,500 MXN por unidad.</p></div>
+<div class="gc glass"><span class="num">02</span><h3>Coordine</h3><p>Envíe su solicitud y acuerde las condiciones de recolección.</p></div>
+<div class="gc glass"><span class="num">03</span><h3>Recolectamos</h3><p>Nuestro equipo privado realiza la recolección programada.</p></div>
 </div></div></section>
-
 <section class="sec" id="faq"><div class="w rv" style="max-width:780px">
 <div class="hd"><span class="eb">Preguntas</span><h2>Lo que más nos preguntan</h2></div>
-<details class="glass"><summary>¿Cuánto cuesta el servicio?</summary><p>[AQUÍ VAN TUS PRECIOS O CONDICIONES]</p></details>
+<details class="glass"><summary>¿Cuánto cuesta un contenedor inteligente?</summary><p>Cada contenedor cuesta $2,500 MXN. La compra incluye el servicio de recolección; frecuencia, cobertura y condiciones se confirman al solicitarlo.</p></details>
 <details class="glass"><summary>¿Tengo que lavar los envases?</summary><p>Basta con enjuagarlos para quitar restos. Así no se contamina el resto del material.</p></details>
-<details class="glass"><summary>¿Cada cuánto pasan a recoger?</summary><p>Tú eliges: semanal, quincenal o una sola vez. [AJUSTA SEGÚN TU PROYECTO]</p></details>
-<details class="glass"><summary>¿Qué zonas cubren?</summary><p>[ZONAS DE COBERTURA]</p></details>
-</div></section>
-
+<details class="glass"><summary>¿Cómo se programa la recolección?</summary><p>Nuestro equipo privado coordina la visita con usted. La frecuencia y los horarios se confirman según la zona y la disponibilidad.</p></details>
+<details class="glass"><summary>¿Qué zonas cubren?</summary><p>La cobertura todavía está pendiente de especificarse. Consulte su colonia o domicilio por WhatsApp antes de realizar la compra.</p></details>
+<details class="glass"><summary>¿Los contenedores realmente detectan residuos incorrectos?</summary><p>La detección de residuos no compatibles es una característica contemplada para los contenedores inteligentes. En esta página puede probar una simulación; no hay dispositivos físicos conectados.</p></details><details class="glass"><summary>¿Qué mantenimiento es gratuito?</summary><p>El mantenimiento del equipo recolector está incluido sin costo, como parte de la operación. Para precisar otras coberturas de mantenimiento, consúltelas antes de contratar.</p></details></div></section>
 <section class="sec" id="contacto"><div class="w rv ct">
-<div class="ab glass"><span class="eb" style="margin:0">Quiénes somos</span><h2>Reciclar tan fácil como pedir un servicio</h2>
-<p>EcoCiclo nació para facilitar el reciclaje en casas y negocios, con un servicio claro, puntual y responsable.</p>
-<p>[AJUSTA TU MISIÓN]</p>
+<div class="ab glass"><span class="eb" style="margin:0">Quiénes somos</span><h2>Un contenedor inteligente y un servicio que le acompaña.</h2>
+<p>EcoCiclo combina contenedores inteligentes, recolectores privados y atención directa para facilitar la separación y el retiro de residuos.</p>
+<p>Reunimos la tecnología de clasificación y la recolección privada en una misma experiencia de servicio.</p>
 <p><b>WhatsApp:</b> 444 285 5239</p></div>
-<form id="f" class="glass"><h3 style="font-size:24px">Solicita tu recolección</h3>
-<label>Nombre<input name="n" required autocomplete="name"></label>
-<label>Dirección o colonia<input name="d" required autocomplete="street-address"></label>
+<form class="glass" id="f"><h3 style="font-size:24px">Solicite compra o recolección</h3><label>Tipo de solicitud<select id="requestType" name="tipo"><option value="Compra de contenedores">Comprar contenedor inteligente</option><option value="Recolección">Coordinar recolección</option><option value="Información del servicio">Solicitar información</option></select></label><label>Contenedor de interés<select id="requestProduct" name="producto"><option value="Orgánico">Orgánico · $2,500</option><option value="Inorgánico reciclable">Inorgánico reciclable · $2,500</option><option value="Inorgánico no reciclable">Inorgánico no reciclable · $2,500</option><option value="Paquete de tres contenedores">Los tres contenedores · $7,500</option><option value="Por definir">Por definir</option></select></label>
+<label>Nombre<input autocomplete="name" name="n" required=""/></label>
+<label>Dirección o colonia<input autocomplete="street-address" name="d" required=""/></label>
 <label>Material principal<select name="m"><option>Papel y cartón</option><option>Plástico</option><option>Vidrio</option><option>Latas y metal</option><option>Electrónicos</option><option>Varios</option></select></label>
 <label>Mensaje (opcional)<textarea name="x" rows="3"></textarea></label>
-<button class="btn b1" type="submit">Enviar por WhatsApp</button></form>
+<button class="btn b1" type="submit">Enviar solicitud por WhatsApp</button></form>
 </div></section>
 </main>
-
-<footer><b>EcoCiclo</b>Reducir · Reutilizar · Reciclar<br>Proyecto escolar · [CIUDAD] · © 2026 · Íconos: Lucide</footer>
-
-<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /></svg></a>
-
-<dialog id="sd"><button class="x" id="sx" aria-label="Cerrar"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" />
-  <path d="m6 6 12 12" /></svg></button><h3 id="st"></h3><p id="sp"></p><ul id="sl"></ul><a class="btn b1" id="sb" href="#" target="_blank" rel="noopener">Solicitar este servicio</a></dialog>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<footer><b>EcoCiclo</b>Reducir · Reutilizar · Reciclar<br/>Contenedores inteligentes · Cobertura por confirmar · © 2026 · Íconos: Lucide<div class="resource-credit"><small>Referencias visuales: <a href="https://storyset.com/illustration/recycling/pana" rel="noopener noreferrer" target="_blank">Storyset</a> · <a href="https://lottiefiles.com/free-animation/recycling-ZSDOYfuTK4" rel="noopener noreferrer" target="_blank">LottieFiles</a> · <a href="https://lucide.dev/icons/" rel="noopener noreferrer" target="_blank">Lucide</a>.</small></div></footer>
+<a aria-label="Escríbenos por WhatsApp" class="wa" href="#" id="wa" rel="noopener" target="_blank"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg></a>
+<dialog id="sd"><button aria-label="Cerrar" class="x" id="sx"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6 6 18"></path>
+<path d="m6 6 12 12"></path></svg></button><h3 id="st"></h3><p id="sp"></p><ul id="sl"></ul><a class="btn b1" href="#" id="sb" rel="noopener" target="_blank">Solicitar este servicio</a></dialog>
 <script>
 document.documentElement.classList.add("js");
+const toggle=document.getElementById("menuToggle"),links=document.getElementById("siteLinks");
+toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú")});
+links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
 var TEL="524442855239";
 var HI="¡Hola! Vi la página de EcoCiclo y me gustaría información sobre el servicio de reciclaje.";
 document.getElementById("wa").href="https://wa.me/"+TEL+"?text="+encodeURIComponent(HI);
-document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();var d=new FormData(e.target);
-var t="Hola, soy "+d.get("n")+". Quiero una recolección en "+d.get("d")+". Material: "+d.get("m")+"."+(d.get("x")?" "+d.get("x"):"");
-window.open("https://wa.me/"+TEL+"?text="+encodeURIComponent(t),"_blank")});
+document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();var d=new FormData(e.currentTarget);var t="Hola, soy "+d.get("n")+". Tipo de solicitud: "+d.get("tipo")+". Contenedor: "+d.get("producto")+". Dirección/colonia: "+d.get("d")+". Material: "+d.get("m")+"."+(d.get("x")?" Mensaje: "+d.get("x"):"")+". Por favor confirmen disponibilidad y condiciones del servicio de recolección incluido.";window.open("https://wa.me/"+TEL+"?text="+encodeURIComponent(t),"_blank","noopener");});
 var SV=[
-{t:"Recolección a domicilio",d:"Pasamos por tu casa en el día y horario que acordemos.",l:["Tú eliges día y horario","Recogemos bolsas o cajas ya separadas","Te avisamos cuando vamos en camino","[PRECIO O CONDICIONES]"]},
+{t:"Recolección a domicilio",d:"Pasamos por tu casa en el día y horario que acordemos.",l:["Tú eliges día y horario","Recogemos bolsas o cajas ya separadas","Servicio con recolectores privados","Incluido al adquirir un contenedor inteligente; condiciones por confirmar"]},
 {t:"Centro de acopio",d:"Un punto de recepción para que lleves tus materiales cuando te acomode.",l:["Dirección: [DIRECCIÓN]","Horario: [HORARIO]","Pesamos y clasificamos contigo","Recibimos papel, plástico, vidrio y metal"]},
-{t:"Plan para empresas",d:"Reciclaje constante para tu negocio u oficina, sin complicaciones.",l:["Contenedores por tipo de material","Rutas semanales o quincenales","Reporte de lo reciclado","[PRECIO O CONDICIONES]"]},
+{t:"Plan para empresas",d:"Reciclaje constante para tu negocio u oficina, sin complicaciones.",l:["Contenedores por tipo de material","Coordinación de recolección con personal propio","Reportes de lo reciclado","Contenedores desde $2,500 MXN por unidad"]},
 {t:"Electrónicos y especiales",d:"Dale un final responsable a lo que no va en la basura normal.",l:["Celulares, cargadores y cables","Computadoras y aparatos viejos","Pilas y baterías","Entrega o recolección con cita"]}];
 var dg=document.getElementById("sd");
 function openS(i){var v=SV[i];document.getElementById("st").textContent=v.t;document.getElementById("sp").textContent=v.d;
 var u=document.getElementById("sl");u.innerHTML="";v.l.forEach(function(x){var li=document.createElement("li");li.textContent=x;u.appendChild(li)});
 document.getElementById("sb").href="https://wa.me/"+TEL+"?text="+encodeURIComponent("¡Hola! Me interesa el servicio de "+v.t+" de EcoCiclo.");dg.showModal()}
-document.querySelectorAll(".sv").forEach(function(c){c.addEventListener("click",function(){openS(+c.dataset.s)})});
+document.querySelectorAll(".sv").forEach(function(c){c.addEventListener("click",function(){openS(+c.dataset.s)});c.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();openS(+c.dataset.s)}})});
 document.getElementById("sx").addEventListener("click",function(){dg.close()});
 dg.addEventListener("click",function(e){if(e.target===dg)dg.close()});
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
@@ -304,7 +551,133 @@ document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
 var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);io2.unobserve(e.target)}})},{threshold:.6});
 document.querySelectorAll("[data-n]").forEach(function(el){io2.observe(el)});
 var L1={"v":"5.7.0","fr":30,"ip":0,"op":120,"w":200,"h":200,"nm":"ciclo","ddd":0,"assets":[],"layers":[{"ddd":0,"ty":4,"nm":"arcos","sr":1,"ks":{"o":{"a":0,"k":100},"r":{"a":1,"k":[{"t":0,"s":[0],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":120,"s":[360]}]},"p":{"a":0,"k":[100,100,0]},"a":{"a":0,"k":[0,0,0]},"s":{"a":0,"k":[100,100,100]}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"el","d":1,"p":{"a":0,"k":[0,0]},"s":{"a":0,"k":[150,150]}},{"ty":"st","c":{"a":0,"k":[0.231,0.51,0.769,1]},"o":{"a":0,"k":100},"w":{"a":0,"k":12},"lc":2,"lj":2},{"ty":"tm","s":{"a":0,"k":0},"e":{"a":0,"k":28},"o":{"a":0,"k":0},"m":1},{"ty":"tr","p":{"a":0,"k":[0,0]},"a":{"a":0,"k":[0,0]},"s":{"a":0,"k":[100,100]},"r":{"a":0,"k":0},"o":{"a":0,"k":100},"sk":{"a":0,"k":0},"sa":{"a":0,"k":0}}]},{"ty":"gr","it":[{"ty":"el","d":1,"p":{"a":0,"k":[0,0]},"s":{"a":0,"k":[150,150]}},{"ty":"st","c":{"a":0,"k":[0.243,0.608,0.345,1]},"o":{"a":0,"k":100},"w":{"a":0,"k":12},"lc":2,"lj":2},{"ty":"tm","s":{"a":0,"k":0},"e":{"a":0,"k":28},"o":{"a":0,"k":120},"m":1},{"ty":"tr","p":{"a":0,"k":[0,0]},"a":{"a":0,"k":[0,0]},"s":{"a":0,"k":[100,100]},"r":{"a":0,"k":0},"o":{"a":0,"k":100},"sk":{"a":0,"k":0},"sa":{"a":0,"k":0}}]},{"ty":"gr","it":[{"ty":"el","d":1,"p":{"a":0,"k":[0,0]},"s":{"a":0,"k":[150,150]}},{"ty":"st","c":{"a":0,"k":[0.91,0.725,0.192,1]},"o":{"a":0,"k":100},"w":{"a":0,"k":12},"lc":2,"lj":2},{"ty":"tm","s":{"a":0,"k":0},"e":{"a":0,"k":28},"o":{"a":0,"k":240},"m":1},{"ty":"tr","p":{"a":0,"k":[0,0]},"a":{"a":0,"k":[0,0]},"s":{"a":0,"k":[100,100]},"r":{"a":0,"k":0},"o":{"a":0,"k":100},"sk":{"a":0,"k":0},"sa":{"a":0,"k":0}}]}],"ip":0,"op":120,"st":0,"bm":0}]},L2={"v":"5.7.0","fr":30,"ip":0,"op":120,"w":200,"h":200,"nm":"ondas","ddd":0,"assets":[],"layers":[{"ddd":0,"ty":4,"nm":"a","sr":1,"ks":{"o":{"a":1,"k":[{"t":0,"s":[70],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":120,"s":[0]}]},"r":{"a":0,"k":0},"p":{"a":0,"k":[100,100,0]},"a":{"a":0,"k":[0,0,0]},"s":{"a":1,"k":[{"t":0,"s":[30,30,100],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":120,"s":[100,100,100]}]}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"el","d":1,"p":{"a":0,"k":[0,0]},"s":{"a":0,"k":[180,180]}},{"ty":"st","c":{"a":0,"k":[0.122,0.365,0.263,1]},"o":{"a":0,"k":100},"w":{"a":0,"k":3},"lc":2,"lj":2},{"ty":"tr","p":{"a":0,"k":[0,0]},"a":{"a":0,"k":[0,0]},"s":{"a":0,"k":[100,100]},"r":{"a":0,"k":0},"o":{"a":0,"k":100},"sk":{"a":0,"k":0},"sa":{"a":0,"k":0}}]}],"ip":0,"op":120,"st":0,"bm":0},{"ddd":0,"ty":4,"nm":"b","sr":1,"ks":{"o":{"a":1,"k":[{"t":0,"s":[35],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":59,"s":[0],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":60,"s":[70],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":120,"s":[35]}]},"r":{"a":0,"k":0},"p":{"a":0,"k":[100,100,0]},"a":{"a":0,"k":[0,0,0]},"s":{"a":1,"k":[{"t":0,"s":[65,65,100],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":59,"s":[100,100,100],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":60,"s":[30,30,100],"i":{"x":[1],"y":[1]},"o":{"x":[0],"y":[0]}},{"t":120,"s":[65,65,100]}]}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"el","d":1,"p":{"a":0,"k":[0,0]},"s":{"a":0,"k":[180,180]}},{"ty":"st","c":{"a":0,"k":[0.122,0.365,0.263,1]},"o":{"a":0,"k":100},"w":{"a":0,"k":3},"lc":2,"lj":2},{"ty":"tr","p":{"a":0,"k":[0,0]},"a":{"a":0,"k":[0,0]},"s":{"a":0,"k":[100,100]},"r":{"a":0,"k":0},"o":{"a":0,"k":100},"sk":{"a":0,"k":0},"sa":{"a":0,"k":0}}]}],"ip":0,"op":120,"st":0,"bm":0}]};
-if(window.lottie){[["lo1",L1],["lo2",L2]].forEach(function(a){var c=document.getElementById(a[0]);if(c)lottie.loadAnimation({container:c,renderer:"svg",loop:true,autoplay:!rm,animationData:a[1]})})}
+/* Lottie se descarga sólo cuando se muestra la ilustración; si está sin conexión, permanece el SVG estático. */
+(function(){var started=false,anims=[];
+function begin(){if(started||rm)return;started=true;var sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js';sc.async=true;sc.onload=function(){if(!window.lottie)return;[['lo1',L1],['lo2',L2]].forEach(function(a){var c=document.getElementById(a[0]);if(c)anims.push({el:c,anim:lottie.loadAnimation({container:c,renderer:'svg',loop:true,autoplay:true,animationData:a[1]})})});var i=new IntersectionObserver(function(entries){entries.forEach(function(e){var item=anims.find(function(x){return x.el===e.target});if(item)e.isIntersecting?item.anim.play():item.anim.pause()})},{threshold:.02});anims.forEach(function(a){i.observe(a.el)})};document.head.appendChild(sc)}
+if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(es){if(es.some(function(e){return e.isIntersecting})){obs.disconnect();begin()}},{rootMargin:'140px'});var one=document.getElementById('lo1');if(one)obs.observe(one)}else{begin()}
+})();
+
+/* Modo claro/oscuro: estado temporal en memoria, sin persistencia. */
+(function(){
+var b=document.getElementById('themeToggle');if(!b)return;
+function sync(){var dark=document.documentElement.dataset.theme==='dark';b.setAttribute('aria-label',dark?'Cambiar a modo claro':'Cambiar a modo oscuro');b.setAttribute('aria-pressed',String(dark));b.title=dark?'Activar modo claro':'Activar modo oscuro';var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=dark?'#101c18':'#f6faf5'}
+b.addEventListener('click',function(){document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';sync()});sync();
+})();
+/* Fallback de fotografías si no hay conexión. */
+document.querySelectorAll('.real-photo').forEach(function(img){img.addEventListener('error',function(){img.hidden=true})});
+/* EcoCiclo Smart: todas las pruebas de sensores son emulaciones del navegador. */
+(function(){
+ const cards=[...document.querySelectorAll('[data-bin]')];
+ const feedback=document.getElementById('binsFeedback');
+ const levels={organic:0,recyclable:0,nonrecyclable:0};
+ const names={organic:'Orgánico',recyclable:'Inorgánico reciclable',nonrecyclable:'Inorgánico no reciclable'};
+ const price=2500;
+ const counts={organic:0,recyclable:0,nonrecyclable:0};
+ const money=value=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(value);
+ function setLevel(card,value){
+   const key=card.dataset.bin;const amount=Math.max(0,Math.min(100,value));levels[key]=amount;
+   card.querySelector('.bin-fill').style.height=amount+'%';
+   card.querySelector('.bin-track i').style.width=amount+'%';
+   card.querySelector('.bin-track').setAttribute('aria-valuenow',String(amount));
+   card.querySelector('output').textContent=amount+'%';
+   card.querySelector('.bin-add').disabled=amount>=100;
+ }
+ function falling(card){
+   if(rm)return;
+   const stage=card.querySelector('.bin-visual'), drop=document.createElement('span');
+   drop.className='bin-falling';const symbol=card.querySelector('.bin-symbol svg');
+   if(symbol)drop.appendChild(symbol.cloneNode(true));stage.appendChild(drop);
+   drop.addEventListener('animationend',()=>drop.remove(),{once:true});
+ }
+ function sensorState(card,ok){
+   const item=card.querySelector('.bin-material').selectedOptions[0].textContent;
+   const msg=card.querySelector('.sensor-response');
+   card.classList.toggle('sensor-error',!ok);card.classList.toggle('sensor-success',ok);
+   msg.textContent=ok?'Correcto: '+item+' corresponde a '+names[card.dataset.bin]+'.':'Alerta: '+item+' NO corresponde a '+names[card.dataset.bin]+'. Depósito rechazado en esta demostración.';
+   msg.setAttribute('data-status',ok?'success':'error');
+   feedback.textContent=msg.textContent;
+ }
+ cards.forEach(card=>{
+   const sel=card.querySelector('.bin-material');
+   sel.value=card.dataset.bin;
+   card.querySelector('.bin-add').addEventListener('click',()=>{
+     const valid=sel.value===card.dataset.bin;
+     sensorState(card,valid);
+     if(valid){setLevel(card,levels[card.dataset.bin]+16);falling(card)}
+   });
+   sel.addEventListener('change',()=>{card.classList.remove('sensor-error','sensor-success');const msg=card.querySelector('.sensor-response');msg.removeAttribute('data-status');msg.textContent='Presione “Probar detección” para analizar el residuo.'});
+   card.querySelector('[data-purchase]').addEventListener('click',()=>{
+     const key=card.dataset.bin;counts[key]=Math.min(99,counts[key]+1);render();
+     document.getElementById('cotizacion').scrollIntoView({behavior:rm?'instant':'smooth',block:'start'});
+   });
+ });
+ document.getElementById('demoBins').addEventListener('click',()=>{
+   cards.forEach((card,i)=>{setLevel(card,[32,64,48][i]);falling(card)});
+   feedback.textContent='Niveles de llenado simulados para los tres productos.';
+ });
+ document.getElementById('resetBins').addEventListener('click',()=>{
+   cards.forEach(card=>{setLevel(card,0);card.classList.remove('sensor-error','sensor-success');const msg=card.querySelector('.sensor-response');msg.textContent='Sensor preparado para validar el residuo.';msg.removeAttribute('data-status')});
+   feedback.textContent='Demostración de llenado reiniciada.';
+ });
+ const rows=document.getElementById('quoteRows'), total=document.getElementById('quoteTotal'), detail=document.getElementById('quoteDetail'), buy=document.getElementById('requestQuote');
+ function render(){
+   rows.replaceChildren();let qty=0;
+   for(const key of Object.keys(counts)){
+     qty+=counts[key];
+     const row=document.createElement('div');row.className='quote-row';
+     const name=document.createElement('div');name.className='quote-row-name';name.textContent=names[key];
+     const unit=document.createElement('small');unit.textContent='$2,500 MXN / unidad';name.appendChild(unit);
+     const stepper=document.createElement('div');stepper.className='quote-stepper';
+     const minus=document.createElement('button');minus.type='button';minus.textContent='−';minus.setAttribute('aria-label','Quitar una unidad de '+names[key]);minus.disabled=counts[key]===0;
+     const output=document.createElement('output');output.textContent=String(counts[key]);output.setAttribute('aria-label','Cantidad de '+names[key]);
+     const plus=document.createElement('button');plus.type='button';plus.textContent='+';plus.setAttribute('aria-label','Añadir una unidad de '+names[key]);plus.disabled=counts[key]>=99;
+     minus.addEventListener('click',()=>{counts[key]--;render()});plus.addEventListener('click',()=>{counts[key]++;render()});
+     stepper.append(minus,output,plus);row.append(name,stepper);rows.appendChild(row);
+   }
+   total.textContent=money(qty*price)+' MXN';detail.textContent=qty?qty+' contenedor'+(qty===1?'':'es')+' seleccionado'+(qty===1?'':'s')+' · Recolección incluida':'Seleccione uno o más contenedores.';
+   buy.disabled=qty===0;
+ }
+ buy.addEventListener('click',()=>{
+   const items=Object.entries(counts).filter(([k,c])=>c>0).map(([k,c])=>c+' × '+names[k]);
+   if(!items.length)return;
+   const sum=Object.values(counts).reduce((a,b)=>a+b,0)*price;
+   const message='¡Hola! Quiero solicitar la compra de contenedores EcoCiclo Smart: '+items.join(', ')+'. Total estimado: '+money(sum)+' MXN. Entiendo que la compra incluye el servicio de recolección. Favor de confirmar disponibilidad, cobertura y condiciones de contratación.';
+   window.open('https://wa.me/'+TEL+'?text='+encodeURIComponent(message),'_blank','noopener');
+ });
+ render();
+})();
+
+/* Ejemplo controlable de la secuencia de llegada, sin API ni ubicación real. */
+(function(){
+ let stage=0;
+ const texts=['Solicitud registrada','Recolector por asignar','Recolector en camino','Llegada al domicilio'];
+ const list=[...document.querySelectorAll('#arrivalSteps li')];
+ const label=document.getElementById('arrivalCurrent');
+ const next=document.getElementById('advanceArrival');
+ function update(){
+   label.textContent=texts[stage];
+   list.forEach((li,i)=>{li.classList.toggle('active',i===stage);li.classList.toggle('done',i<stage);if(i===stage)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current')});
+   next.disabled=stage===texts.length-1;
+   document.querySelector('.route-truck').style.left=(18+stage*20)+'%';
+ }
+ next.addEventListener('click',()=>{if(stage<texts.length-1)stage++;update()});
+ document.getElementById('resetArrival').addEventListener('click',()=>{stage=0;update()});update();
+})();
+
+/* Accesos rápidos móviles: solo navegación, sin estado persistente. */
+(function(){
+ const links=[...document.querySelectorAll('.quick-link')];
+ function mark(id){links.forEach(a=>{const on=a.dataset.nav===id;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}
+ links.forEach(a=>a.addEventListener('click',()=>mark(a.dataset.nav)));
+ if('IntersectionObserver' in window){
+   const map=['top','contenedores','recoleccion','llegada','contacto'];
+   const obs=new IntersectionObserver(entries=>{
+      const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(visible)mark(visible.target.id==='top'?'top':visible.target.id);
+   },{rootMargin:'-15% 0px -48% 0px',threshold:0});
+   map.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el)});
+ }
+})();
 </script>
-</body>
+<div aria-label="Accesos rápidos móviles" class="mobile-quick-nav" role="navigation"><a class="quick-link" data-nav="top" href="#top"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-7v-7h-4v7H3z"></path></svg><span>Inicio</span></a><a class="quick-link" data-nav="contenedores" href="#contenedores"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg><span>Productos</span></a><a class="quick-link" data-nav="recoleccion" href="#recoleccion"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7"></path><circle cx="7.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg><span>Recolectores</span></a><a class="quick-link" data-nav="llegada" href="#llegada"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="6" r="2"></circle><path d="M8 18h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"></path></svg><span>Llegada</span></a><a class="quick-link" data-nav="contacto" href="#contacto"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5A9 9 0 1 1 21 11.5Z"></path></svg><span>Contacto</span></a></div></body>
 </html>

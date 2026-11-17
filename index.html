@@ -212,7 +212,7 @@ html[data-theme=dark] #contenedores{background:linear-gradient(180deg,transparen
 .bin-head:before{content:'';display:block;width:7px;height:7px;border-radius:50%;background:var(--bin)}
 .bin-card h3{font-size:clamp(20px,2.3vw,24px);letter-spacing:-.045em;line-height:1.2;max-width:270px;margin:0 auto 9px;color:var(--text)}
 .bin-card .bin-desc{max-width:285px;min-height:70px;margin:0 auto 3px;font-size:13.5px;line-height:1.55;color:var(--sub)}
-.bin-visual{height:248px;position:relative;margin:5px auto 9px;max-width:230px;filter:drop-shadow(0 14px 12px rgba(0,0,0,.1))}
+.bin-visual{width:min(100%,230px);height:248px;position:relative;margin:5px auto 9px;filter:drop-shadow(0 14px 12px rgba(0,0,0,.1))}
 .bin-lid{position:absolute;left:18px;right:18px;top:20px;height:23px;z-index:4;border-radius:10px 10px 6px 6px;background:linear-gradient(180deg,rgba(255,255,255,.31),transparent),var(--bin);box-shadow:inset 0 -4px 0 #0002}
 .bin-lid:before{content:'';position:absolute;width:54px;height:11px;left:50%;top:-10px;transform:translateX(-50%);border:6px solid var(--bin);border-bottom:0;border-radius:12px 12px 0 0}
 .bin-shell{position:absolute;left:30px;right:30px;top:39px;height:187px;border-radius:5px 5px 25px 25px;overflow:hidden;background:linear-gradient(105deg,#ffffff40,transparent 35%,#00000018 92%),var(--bin);box-shadow:inset -7px 0 0 #00000013,inset 7px 0 0 #ffffff30}
@@ -314,6 +314,32 @@ html[data-theme=light] .bin-buy{background:#176746;color:#fff}
 @media(max-width:760px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}.bins{grid-template-columns:1fr}.bins .bin-card:last-child{grid-column:auto;max-width:initial}.bin-card h3{min-height:0}.quote-heading{align-items:start;flex-direction:column}.quote-grid{grid-template-columns:1fr}.quote-highlight{white-space:normal}.fleet-benefits{grid-template-columns:1fr}.tech-dash-body{grid-template-columns:1fr 1fr}.wa{bottom:calc(94px + env(safe-area-inset-bottom,0px));right:12px;width:49px;height:49px}.mobile-quick-nav{position:fixed;bottom:0;left:0;right:0;z-index:29;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--surface);border-top:1px solid var(--line);padding:8px 8px calc(7px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 25px #10271d1c}.quick-link{display:flex;min-width:0;min-height:55px;align-items:center;justify-content:center;flex-direction:column;gap:3px;border-radius:13px;color:var(--sub);font-weight:700;font-size:10px}.quick-link .ic{width:22px;height:22px}.quick-link.active,.quick-link[aria-current=location]{background:var(--tag-bg);color:var(--accent-strong)}.quick-link:focus-visible{outline-offset:-2px}.sec{scroll-margin-top:105px}.hero{padding-bottom:30px}.hero-sticker{font-size:10px;padding:7px 9px}.hero-value span{font-size:11px}.arrival-flow-head{align-items:flex-start}.arrival-visual{min-height:360px}}
 @media(max-width:450px){.quote-row{padding:12px;gap:6px}.quote-row-name{font-size:12px;max-width:180px}.quote-row-name small{font-size:10px}.quote-stepper button{height:32px;width:31px}.tech-dash-body{grid-template-columns:1fr}.scan-orbit{max-height:150px}.tech-states{grid-template-columns:1fr 1fr}.tech-states>div{padding:9px}.arrival-controls .btn{flex:1 1 auto}.maintenance-graphic{min-height:210px}.maintenance-big-icon{width:120px;height:120px}.maintenance-big-icon .ic{width:65px;height:65px}.maintenance-small{font-size:9px}.maintenance-small.one{left:-5px}.maintenance-small.two{right:-5px}.bin-card{padding:20px}.hero-value{gap:8px}}
 @media(prefers-reduced-motion:reduce){.route-truck{transition:none}.smart-chip,.scan-ring{animation:none!important}}
+
+/* Parche específico de producto: la figura tiene dimensiones reales en cards flex. */
+.bin-card .bin-visual{width:min(100%,230px);min-width:0;align-self:center;flex:none;isolation:isolate}
+.bin-card .bin-lid{background:linear-gradient(180deg,rgba(255,255,255,.48),transparent 69%),var(--bin)}
+.bin-card .bin-lid::after{content:'';position:absolute;left:50%;top:8px;width:34px;height:5px;transform:translateX(-50%);border-radius:6px;background:#102b22a6;box-shadow:0 1px 0 #fff7}
+.bin-card .bin-shell{background:linear-gradient(103deg,rgba(255,255,255,.42) 0%,transparent 30%,rgba(0,0,0,.12) 84%,rgba(0,0,0,.22) 100%),var(--bin)}
+.bin-card .bin-shell::before{content:'';position:absolute;left:10%;right:10%;bottom:12px;height:4px;background:#ffffff42;border-radius:8px;z-index:1}
+.bin-card .bin-window{background:linear-gradient(100deg,#071d1b65,#0b2a2661);border:2px solid #ffffff47}
+.bin-card .bin-symbol{background:#fff;z-index:4}
+.bin-card .bin-wheel{z-index:2}
+.bin-card .bin-visual::before{content:'';position:absolute;width:16px;height:16px;right:28px;top:50px;background:#9cfcc7;border:4px solid #165238;border-radius:50%;box-shadow:0 0 0 3px #f5fff6a6;z-index:5}
+.bin-card.sensor-error .bin-visual::before{background:#ff5047;border-color:#8a261d;box-shadow:0 0 0 4px #ffbbb477}
+.bin-card.sensor-error .bin-visual::after{content:'!';position:absolute;right:17px;top:75px;width:31px;height:31px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:19px;background:#dc3d36;border:3px solid #fff;border-radius:50%;box-shadow:0 5px 14px #61180f59;z-index:5}
+.bin-card.sensor-error .bin-lid{box-shadow:inset 0 -4px 0 #0002,0 0 0 3px #ec51458a}
+.bin-card .bin-visual,.bin-card .bin-shell,.bin-card .bin-lid{box-sizing:border-box}
+.bins-actions .sound-toggle{min-width:160px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.sound-toggle .ic{width:18px;height:18px}
+.sound-toggle[aria-pressed="false"]{opacity:.72}
+.sound-toggle:focus-visible,.bin-add:focus-visible,.bin-material:focus-visible{outline:3px solid var(--amb);outline-offset:3px}
+.bin-card .bin-add,.bin-card .bin-buy{touch-action:manipulation}
+.bin-card.sensor-error .sensor-response{font-weight:750}
+@media(max-width:760px){.bin-card .bin-visual{width:min(100%,230px);height:230px}.bins-actions .sound-toggle{flex:1 1 150px}.bin-card .bin-shell{height:174px}}
+@media(prefers-reduced-motion:reduce){.bin-card.sensor-error .bin-lid{animation:none!important}}
+
+/* Corrección de desbordamiento en tablet: controles distribuidos sin empujar el viewport. */
+@media(min-width:761px) and (max-width:950px){.bins-intro{flex-wrap:wrap;align-items:flex-start}.bins-intro .hd{flex:1 1 100%}.bins-actions{flex:1 1 100%;flex-wrap:wrap;min-width:0}.bins-actions .btn{flex:0 1 auto}}
 </style><style>.stats .st b{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.035em;overflow-wrap:anywhere}.stats .st span{font-size:13px}.stats .st{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:100px}</style></head>
 <body>
 <div aria-hidden="true" class="bg"><i></i><i></i><i></i></div>
@@ -434,7 +460,7 @@ html[data-theme=light] .bin-buy{background:#176746;color:#fff}
 </div></section>
 <section aria-labelledby="bins-title" class="sec" id="contenedores"><div class="w rv">
 <div class="bins-intro"><div class="hd"><span class="eb">Nuestra línea de productos</span><h2 id="bins-title">Tres contenedores inteligentes. Una solución completa.</h2><p>Elija el modelo adecuado para sus residuos. Cada uno cuesta $2,500 MXN e incluye el servicio de recolección de EcoCiclo.</p></div>
-<div class="bins-actions"><button class="btn b2" id="demoBins" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"></path><path d="m19 17 .6 1.5L21 19l-1.4.5L19 21l-.6-1.5L17 19l1.4-.5L19 17Z"></path></svg> Ver llenado</button><button class="btn b2" id="resetBins" type="button">Vaciar demostración</button></div></div>
+<div class="bins-actions"><button class="btn b2 sound-toggle" id="alertSoundToggle" type="button" aria-pressed="true" aria-label="Silenciar sonido de alertas" title="Activar o silenciar alertas"><svg class="ic" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9a5 5 0 0 1 0 6"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span>Sonido: activado</span></button><button class="btn b2" id="demoBins" type="button"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"></path><path d="m19 17 .6 1.5L21 19l-1.4.5L19 21l-.6-1.5L17 19l1.4-.5L19 17Z"></path></svg> Ver llenado</button><button class="btn b2" id="resetBins" type="button">Vaciar demostración</button></div></div>
 <div class="bins"><article class="bin-card organic" data-bin="organic" data-level="0" data-name="Orgánico">
 <div class="bin-head">Contenedor inteligente · Residuo orgánico</div><h3>Orgánico</h3><p class="bin-desc">Frutas, verduras, hojas secas y residuos biodegradables.</p>
 <div class="smart-chip"><svg aria-hidden="true" class="ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0"></path><circle cx="12" cy="20" r="1"></circle></svg> Sensor inteligente</div><div aria-hidden="true" class="bin-visual"><div class="bin-lid"></div><div class="bin-shell"><div class="bin-window"><div class="bin-fill"></div></div><div class="bin-symbol"><svg viewbox="0 0 24 24"><path d="M20 4c-8 0-14 4-14 11a5 5 0 0 0 5 5c7 0 11-8 9-16ZM4 21c2-5 7-9 12-12"></path></svg></div></div><div class="bin-wheel l"></div><div class="bin-wheel r"></div></div>
@@ -573,6 +599,37 @@ document.querySelectorAll('.real-photo').forEach(function(img){img.addEventListe
  const names={organic:'Orgánico',recyclable:'Inorgánico reciclable',nonrecyclable:'Inorgánico no reciclable'};
  const price=2500;
  const counts={organic:0,recyclable:0,nonrecyclable:0};
+ const soundToggle=document.getElementById('alertSoundToggle');
+ let soundEnabled=true, alertAudioContext=null;
+ soundToggle.addEventListener('click',()=>{
+   soundEnabled=!soundEnabled;
+   soundToggle.setAttribute('aria-pressed',String(soundEnabled));
+   soundToggle.setAttribute('aria-label',soundEnabled?'Silenciar sonido de alertas':'Activar sonido de alertas');
+   soundToggle.querySelector('span').textContent=soundEnabled?'Sonido: activado':'Sonido: silenciado';
+ });
+ function playAlertBeep(){
+   if(!soundEnabled)return;
+   const AudioEngine=window.AudioContext||window.webkitAudioContext;
+   if(!AudioEngine)return;
+   try{
+     if(!alertAudioContext)alertAudioContext=new AudioEngine();
+     const play=()=>{
+       const start=alertAudioContext.currentTime+0.015;
+       [[0,960,.12],[.16,760,.16]].forEach(([offset,hz,length])=>{
+         const oscillator=alertAudioContext.createOscillator();
+         const volume=alertAudioContext.createGain();
+         oscillator.type='sine';oscillator.frequency.setValueAtTime(hz,start+offset);
+         volume.gain.setValueAtTime(.0001,start+offset);
+         volume.gain.exponentialRampToValueAtTime(.045,start+offset+.014);
+         volume.gain.exponentialRampToValueAtTime(.0001,start+offset+length);
+         oscillator.connect(volume);volume.connect(alertAudioContext.destination);
+         oscillator.start(start+offset);oscillator.stop(start+offset+length+.01);
+       });
+     };
+     if(alertAudioContext.state==='suspended')alertAudioContext.resume().then(play).catch(()=>{});
+     else play();
+   }catch(error){/* La alerta visual sigue operando si el navegador no tiene audio. */}
+ }
  const money=value=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(value);
  function setLevel(card,value){
    const key=card.dataset.bin;const amount=Math.max(0,Math.min(100,value));levels[key]=amount;
@@ -596,6 +653,7 @@ document.querySelectorAll('.real-photo').forEach(function(img){img.addEventListe
    msg.textContent=ok?'Correcto: '+item+' corresponde a '+names[card.dataset.bin]+'.':'Alerta: '+item+' NO corresponde a '+names[card.dataset.bin]+'. Depósito rechazado en esta demostración.';
    msg.setAttribute('data-status',ok?'success':'error');
    feedback.textContent=msg.textContent;
+   if(!ok)playAlertBeep();
  }
  cards.forEach(card=>{
    const sel=card.querySelector('.bin-material');
